@@ -170,7 +170,7 @@
     }
 
    .navbar-brand img {
-        height: 50px;
+        height: 75px;/* Set a large height. If it doesn't work then change the height to width*/
     }
 
     /*Hero Section*/
@@ -211,7 +211,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="Black Logo.png" alt="Phở Lux Logo" height="50">
+        <img src="logo-black.jpeg" alt="Phở Lux Logo" >
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -309,114 +309,4 @@
           <h4>Pearl Tang</h4>
           <p class="text-muted" style="color: var(--primary-color) !important;">Operations Executive</p>
           <p>A highly accomplished executive with over 15 years of experience providing strategic consulting and leadership within the international F&B, luxury fashion, and beauty/cosmetic spa industries. She has successfully led enterprise value creation initiatives totaling over $3.5 billion across diverse markets, including the United States, China, Turkey, Japan, India, and Nepal.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Us Section (Form) -->
-  <section id="contact-us" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-5">Talk to Us</h2>
-      <p class="text-center">Have questions or need assistance? Whether you're inquiring about a reservation, catering options, our menu, or something else, our team is here to help. Contact us today!</p>
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <form class="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Name" name="name" style="color: white;">
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email" name="email" style="color: white;">
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="4" placeholder="Message" name="message" style="color: white;"></textarea>
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section (Location) -->
-  <section id="contact" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-5">Contact & Location</h2>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.548632985645!2d-95.56390368489126!3d29.769215381988785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c3b3f3b684a1%3A0x6b494d16a1d4733c!2s111107%201%2F2%20Bellaire%20Blvd%2C%20Houston%2C%20TX%2077072!5e0!3m2!1sen!2sus!4v1716612345678!5m2!1sen!2sus"
-              width="100%"
-              height="450"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy">
-            </iframe>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="contact-info">
-            <h4><i class="bi bi-clock me-2"></i>Store Hours</h4>
-            <ul class="list-unstyled">
-              <li>Mon: 9AM - 5PM</li>
-              <li>Tue: Closed</li>
-              <li>Wed-Sun: 9AM - 5PM</li>
-            </ul>
-
-            <h4 class="mt-4"><i class="bi bi-geo-alt me-2"></i>Address</h4>
-            <p>
-              111107 1/2 Bellaire Boulevard<br>
-              Houston, TX 77072<br>
-              (Located in Vietnam Shopping Center)
-            </p>
-
-            <h4 class="mt-4"><i class="bi bi-envelope me-2"></i>Contact</h4>
-            <p>
-              <a href="mailto:phoLux8@gmail.com" style = "color: var(--text-color)">phoLux8@gmail.com</a><br>
-              <a href="tel:3464408991" style = "color: var(--text-color)">(346) 440-8991</a>
-            </p>
-
-            <h4 class="mt-4">Follow Us</h4>
-            <div class="social-links">
-              <a href="https://facebook.com/pholux.2024" target="_blank" class="btn btn-outline-light" style = "color: var(--text-color)">
-                <i class="bi bi-facebook"></i> Facebook
-              </a>
-              <a href="https://instagram.com/phol.ux" target="_blank" class="btn btn-outline-light" style = "color: var(--text-color)">
-                <i class="bi bi-instagram"></i> Instagram
-              </a>
-              <a href="https://tiktok.com/@pho.lux" target="_blank" class="btn btn-outline-light" style = "color: var(--text-color)">
-                <i class="bi bi-tiktok"></i> TikTok
-              </a>
-              <a href="https://www.yelp.com/biz/pho-lux-houston" target="_blank" class="btn btn-outline-light" style = "color: var(--text-color)">
-                <i class="bi bi-yelp"></i> Yelp Reviews
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Smooth Scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        const headerOffset = 70;
-        const elementPosition = target.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth"
-        });
-      });
-    </script>
-</body>
-</html>
+      
