@@ -50,3 +50,20 @@ const heroObserver = new IntersectionObserver(function (entries) {
 // Select the Hero Section
 const heroSection = document.querySelector('.hero-section');
 heroObserver.observe(heroSection);
+
+// Back to Top Button Functionality
+const backToTopButton = document.getElementById('back-to-top');
+
+// Show or hide the button based on scroll position
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {  // Show after scrolling down 300px
+        backToTopButton.style.display = 'block';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+});
+
+// Scroll to top when the button is clicked
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        
