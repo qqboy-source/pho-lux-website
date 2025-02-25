@@ -1,56 +1,49 @@
-// Separate Javascript
-// Code from CSS
-/* Style for active nav link */
- .nav-link.active {
-   color: var(--primary-color) !important; /* Yellow */
-   font-weight: bold; /* Optional: Make the active link bold */
- }
- /* Highlight Navbar Links on Scroll */
- const sections = document.querySelectorAll('section'); // All sections
- const navLinks = document.querySelectorAll('.nav-link'); // All nav links
+// Highlight Navbar Links on Scroll
 
- function updateNavLinks() {
-   let currentSection = null;
+const sections = document.querySelectorAll('section'); // All sections
+const navLinks = document.querySelectorAll('.nav-link'); // All nav links
 
-   sections.forEach(section => {
-     const sectionTop = section.offsetTop;
-     const sectionHeight = section.clientHeight;
-     if (pageYOffset >= (sectionTop - sectionHeight / 3)) { // Threshold to highlight
-       currentSection = section.getAttribute('id');
-     }
-   });
+function updateNavLinks() {
+    let currentSection = null;
 
-   navLinks.forEach(link => {
-     link.classList.remove('active');
-     if (link.getAttribute('href').substring(1) === currentSection) {
-       link.classList.add('active');
-     }
-   });
- }
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - sectionHeight / 3)) { // Threshold to highlight
+            currentSection = section.getAttribute('id');
+        }
+    });
 
- // Initial call to set the active link on page load
- updateNavLinks();
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === currentSection) {
+            link.classList.add('active');
+        }
+    });
+}
 
- // Listen for scroll events
- window.addEventListener('scroll', updateNavLinks);
+// Initial call to set the active link on page load
+updateNavLinks();
 
- const faders = document.querySelectorAll('.fade-in-on-scroll');
+// Listen for scroll events
+window.addEventListener('scroll', updateNavLinks);
 
- const appearOptions = {
-   threshold: 0.5 // Adjust as needed
- };
+const faders = document.querySelectorAll('.fade-in-on-scroll');
 
- const appearOnScroll = new IntersectionObserver(function (entries, observer) {
-   entries.forEach(entry => {
-     if (entry.isIntersecting) {
-       entry.target.classList.add('active');
-       observer.unobserve(entry.target);
-     } else {
-       entry.target.classList.remove('active'); // Remove 'active' class on scroll up
-     }
-   })
- }, appearOptions);
+const appearOptions = {
+    threshold: 0.5 // Adjust as needed
+};
 
- faders.forEach(fader => {
-   appearOnScroll.observe(fader);
- });
+const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        } else {
+            entry.target.classList.remove('active'); // Remove 'active' class on scroll up
+        }
+    })
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
