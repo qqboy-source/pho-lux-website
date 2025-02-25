@@ -6,7 +6,6 @@
     --secondary-color: #000;
     /* Black */
     --text-color: #fff;
-    /* White */
 }
 
 body {
@@ -366,7 +365,7 @@ body {
 
 /* Center the Hero Section Title and Subtitle */
 .hero-section .container h1,
-.hero-section .container p {
+.hero-section p {
     text-align: center;
 }
 
