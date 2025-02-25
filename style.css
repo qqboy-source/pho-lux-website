@@ -321,6 +321,7 @@ body {
     /* Align text to the left */
     width: 55%;
     /* Take up 55% of the container */
+    padding-right: 20px; /* Added padding to prevent touching image */
 }
 
 .hero-image {
@@ -364,7 +365,7 @@ body {
 
 /* Center the Hero Section Title and Subtitle */
 .hero-section .container h1,
-.hero-section p {
+.hero-section .container p {
     text-align: center;
 }
 
@@ -404,4 +405,12 @@ body {
 .team-member.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Style for active nav link */
+.nav-link.active {
+    color: var(--primary-color) !important;
+    /* Yellow */
+    font-weight: bold;
+    /* Optional: Make the active link bold */
 }
