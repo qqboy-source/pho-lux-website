@@ -1,7 +1,7 @@
 const faders = document.querySelectorAll('.fade-in-on-scroll');
 
 const appearOptions = {
-    threshold: 0.5
+    threshold: 0.2, // Reduced threshold for earlier triggering
     // Adjust as needed
 };
 
@@ -51,12 +51,13 @@ const heroObserver = new IntersectionObserver(function (entries) {
 const heroSection = document.querySelector('.hero-section');
 heroObserver.observe(heroSection);
 
+
 // Back to Top Button Functionality
 const backToTopButton = document.getElementById('back-to-top');
 
 // Show or hide the button based on scroll position
 window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {  // Show after scrolling down 300px
+    if (window.pageYOffset > 300) {
         backToTopButton.style.display = 'block';
     } else {
         backToTopButton.style.display = 'none';
@@ -66,4 +67,7 @@ window.addEventListener('scroll', () => {
 // Scroll to top when the button is clicked
 backToTopButton.addEventListener('click', () => {
     window.scrollTo({
-        
+        top: 0,
+        behavior: 'smooth'
+    });
+});
