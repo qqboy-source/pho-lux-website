@@ -364,6 +364,44 @@ body {
 
 /* Center the Hero Section Title and Subtitle */
 .hero-section .container h1,
-.hero-section .container p {
+.hero-section p {
     text-align: center;
+}
+
+/*Fade effect*/
+.fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-in-out;
+}
+
+.fade-in-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* About Section Fade-in */
+#about p,
+#about blockquote {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-in-out;
+}
+
+#about p.active,
+#about blockquote.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Meet The Team Fade-In */
+.team-member {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-in-out;
+}
+
+.team-member.active {
+    opacity: 1;
+    transform: translateY(0);
 }
