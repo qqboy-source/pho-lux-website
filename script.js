@@ -37,7 +37,6 @@ const appearOnScroll = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
-            observer.unobserve(entry.target);
         } else {
             entry.target.classList.remove('active'); // Remove 'active' class on scroll up
         }
@@ -47,6 +46,7 @@ const appearOnScroll = new IntersectionObserver(function(entries, observer) {
 faders.forEach(fader => {
     appearOnScroll.observe(fader);
 });
+
 // Select all smoke elements
 const smokeElements = document.querySelectorAll('.smoke');
 
@@ -79,28 +79,3 @@ const heroObserver = new IntersectionObserver(function(entries) {
 // Select the Hero Section
 const heroSection = document.querySelector('.hero-section');
 heroObserver.observe(heroSection);
-
-// Fade Description
-const descriptionText = document.querySelector('#descriptionText');
-
-function updateDescriptionOpacity() {
-    const scrollPosition = window.pageYOffset;
-    // Distance to start fading out (adjust as needed)
-    const fadeStart = 200; // Example value
-    // Distance at which to completely fade out
-    const fadeEnd = 600; // Example value
-
-    let opacity = 1;
-
-    if (scrollPosition > fadeStart) {
-        // Calculate opacity (linearly decreasing)
-        opacity = 1 - (scrollPosition - fadeStart) / (fadeEnd - fadeStart);
-        // Ensure opacity doesn't go below 0 or above 1
-        opacity = Math.max(0, Math.min(1, opacity));
-    }
-
-    descriptionText.style.opacity = opacity;
-}
-
-// Run the Javascript
-window.addEventListener('scroll', updateDescriptionOpacity);
