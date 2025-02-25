@@ -267,13 +267,23 @@ body {
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+    /* Add padding to create space between text/image and edges */
+    padding-left: 5%;  /* Add left padding */
+    padding-right: 5%; /* Add right padding */
 }
+
 
 .hero-text {
     text-align: left;
-    width: 55%;
-    padding-right: 20px;
+    width: 50%; /* Reduced width slightly */
+    padding-right: 30px;  /* Increased padding for more space */
+
 }
+/* Set explicit text alignment for hero text */
+.hero-text p {
+    text-align: left !important; /* Force left alignment */
+}
+
 
 .hero-image {
     width: 45%;
