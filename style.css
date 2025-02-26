@@ -268,6 +268,13 @@ body {
         width: 100%;
         /* Full width for both columns */
     }
+    /*Hero image*/
+     .hero-image img {
+        border-radius: 0; /* Remove border-radius on smaller screens */
+    }
+    .hero-image-overlay{
+        border-radius: 0;
+    }
 }
 
 .navbar-brand img {
@@ -373,10 +380,12 @@ body {
 /* Modified h1 styling for hero section */
 .hero-section .container h1 {
     font-family: var(--heading-font);
-    font-size: 7rem; /*  Increased font size to 2x (3.5rem * 2 = 7rem) */
+    font-size: 7rem;
+    /* Increased font size to 2x (3.5rem * 2 = 7rem) */
     color: var(--primary-color);
     text-align: center;
-    letter-spacing: 0.2em; /* Add letter spacing */
+    letter-spacing: 0.2em;
+    /* Add letter spacing */
 }
 
 /* Fade effect */
