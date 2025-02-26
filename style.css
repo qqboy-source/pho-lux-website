@@ -52,93 +52,7 @@ body {
     overflow: hidden;
 }
 
-/* Smoke Styles */
-.smoke {
-    position: absolute;
-    /* width and height will be set dynamically */
-    border-radius: 50%;
-    pointer-events: none;
-    animation: fastBlow 3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
-    opacity: 0;
-    filter: blur(30px);
-    /* Adjust blur as needed */
-    background: radial-gradient(circle at center,
-            rgba(255, 255, 255, 0.4) 0%,
-            rgba(255, 255, 255, 0.1) 70%,
-            rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-}
-
-@keyframes fastBlow {
-    0% {
-        transform: translateY(30px) translateX(-20px) scale(0.2);
-        opacity: 0.5;
-    }
-
-    20% {
-        opacity: 0.6;
-    }
-
-    80% {
-        transform: translateY(-150px) translateX(150px) scale(2);
-        opacity: 0.05;
-    }
-
-    100% {
-        transform: translateY(-250px) translateX(200px) scale(3);
-        opacity: 0;
-    }
-}
-
-
-/* Positions for the reduced smoke */
-.smoke:nth-child(1) {
-    left: 5%;
-    top: 70%;
-    animation-delay: 0s;
-}
-
-.smoke:nth-child(2) {
-    left: 20%;
-    top: 75%;
-    animation-delay: 0.5s;
-}
-
-.smoke:nth-child(3) {
-    left: 35%;
-    top: 65%;
-    animation-delay: 1s;
-}
-
-.smoke:nth-child(4) {
-    left: 50%;
-    top: 70%;
-    animation-delay: 1.5s;
-}
-
-.smoke:nth-child(5) {
-    left: 65%;
-    top: 60%;
-    animation-delay: 2s;
-}
-
-.smoke:nth-child(6) {
-    left: 80%;
-    top: 75%;
-    animation-delay: 0.2s;
-}
-
-.smoke:nth-child(7) {
-    left: 55%;
-    top: 78%;
-    animation-delay: 0.2s;
-}
-
-.smoke:nth-child(8) {
-    left: 45%;
-    top: 63%;
-    animation-delay: 0.2s;
-}
+/* Removed all smoke-related CSS */
 
 /* Best Sellers Section */
 #best-sellers {
@@ -231,11 +145,7 @@ body {
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-    .smoke {
-        width: 80px;
-        height: 80px;
-        filter: blur(15px);
-    }
+    /* Removed smoke styles */
 
     /* Adjust hero text and image for smaller screens */
     .hero-content-wrapper {
@@ -444,7 +354,7 @@ body {
     cursor: pointer;
     z-index: 1001;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease;
+    transition: background-color: 0.3s ease;
 }
 
 #back-to-top:hover {
