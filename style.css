@@ -254,6 +254,15 @@ body {
         margin-top: 20px;
         /* Add space above image */
     }
+
+    /* About section on smaller screens */
+    #about .row {
+        flex-direction: column; /* Stack image and text vertically */
+    }
+
+    #about .col-md-6 {
+        width: 100%; /* Full width for both columns */
+    }
 }
 
 .navbar-brand img {
@@ -434,4 +443,10 @@ body {
 .img-fluid {
     max-width: 100%;
     height: auto;
+}
+
+/* About section specific styles */
+#about .about-image {
+    border-radius: 15px; /* Optional: Add rounded corners to the image */
+    margin-bottom: 20px; /* Add some space below the image on mobile */
 }
