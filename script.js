@@ -18,4 +18,16 @@ faders.forEach(fader => {
     appearOnScroll.observe(fader);
 });
 
-//
+// --- Smoke Animation Logic (Now targets the #about section) ---
+
+const smokeElements = document.querySelectorAll('.smoke');
+
+function reanimateSmoke() {
+    smokeElements.forEach(smoke => {
+        // 1. Reset animation
+        smoke.style.animation = 'none';
+        smoke.offsetHeight; // Trigger reflow
+
+        // 2. Randomize size, blur, and *position*
+        const size = Math.floor(Math.random() * (200 - 80 + 1)) + 80;
+        const blur = Math.floor(Math.random() * (30 - 1
