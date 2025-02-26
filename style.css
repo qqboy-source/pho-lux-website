@@ -373,12 +373,10 @@ body {
 /* Modified h1 styling for hero section */
 .hero-section .container h1 {
     font-family: var(--heading-font);
-    font-size: 7rem;
-    /* Increased font size to 2x (3.5rem * 2 = 7rem) */
+    font-size: 7rem; /*  Increased font size to 2x (3.5rem * 2 = 7rem) */
     color: var(--primary-color);
     text-align: center;
-    letter-spacing: 0.2em;
-    /* Add letter spacing */
+    letter-spacing: 0.2em; /* Add letter spacing */
 }
 
 /* Fade effect */
