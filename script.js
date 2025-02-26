@@ -39,20 +39,3 @@ function reanimateSmoke() {
         smoke.style.transform = `translate(${offsetX}px, ${offsetY}px)`; // Initial position
 
         // 3. Re-add animation (with consistent timing)
-        smoke.style.animation = 'fastBlow 3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards';
-    });
-}
-
-// Hero section observer to run the smoke
-const heroObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            reanimateSmoke();
-            //If you want the smoke to stop when it's not in view:
-            //heroObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.1 }); // Start a bit earlier
-
-const heroSection = document.querySelector('.hero-section');
-heroObserver.observe(heroSection);
