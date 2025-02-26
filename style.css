@@ -1,463 +1,312 @@
-:root {
-    --heading-font: 'Playfair Display', serif;
-    --body-font: 'Lato', sans-serif;
-    --primary-color: #ffc107;
-    /* Yellow */
-    --secondary-color: #000;
-    /* Black */
-    --text-color: #fff;
-    /* White */
-}
-
-body {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    font-family: var(--body-font);
-    line-height: 1.6;
-    padding-top: 70px;
-    /* Adjust to account for fixed navbar */
-    position: relative;
-    /* Needed for the back-to-top button positioning */
-}
-
-/* Navbar Styles */
-.navbar {
-    background-color: var(--secondary-color) !important;
-    width: 100%;
-    z-index: 1000;
-    border-bottom: 3px solid var(--primary-color);
-}
-
-.navbar-brand {
-    color: var(--primary-color) !important;
-}
-
-.nav-link {
-    color: var(--text-color) !important;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: var(--primary-color) !important;
-}
-
-/* Hero Section Styles */
-.hero-section {
-    background-image: url('hero-bg.jpg');
-    /*  Make sure this image exists! */
-    background-size: cover;
-    background-position: center;
-    min-height: 70vh;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Smoke Styles */
-.smoke {
-    position: absolute;
-    /* width and height will be set dynamically */
-    border-radius: 50%;
-    pointer-events: none;
-    animation: fastBlow 3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
-    opacity: 0;
-    filter: blur(30px);
-    /* Adjust blur as needed */
-    background: radial-gradient(circle at center,
-            rgba(255, 255, 255, 0.4) 0%,
-            rgba(255, 255, 255, 0.1) 70%,
-            rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-}
-
-@keyframes fastBlow {
-    0% {
-        transform: translateY(30px) translateX(-20px) scale(0.2);
-        opacity: 0.5;
-    }
-
-    20% {
-        opacity: 0.6;
-    }
-
-    80% {
-        transform: translateY(-150px) translateX(150px) scale(2);
-        opacity: 0.05;
-    }
-
-    100% {
-        transform: translateY(-250px) translateX(200px) scale(3);
-        opacity: 0;
-    }
-}
-
-
-/* Positions for the reduced smoke */
-.smoke:nth-child(1) {
-    left: 5%;
-    top: 70%;
-    animation-delay: 0s;
-}
-
-.smoke:nth-child(2) {
-    left: 20%;
-    top: 75%;
-    animation-delay: 0.5s;
-}
-
-.smoke:nth-child(3) {
-    left: 35%;
-    top: 65%;
-    animation-delay: 1s;
-}
-
-.smoke:nth-child(4) {
-    left: 50%;
-    top: 70%;
-    animation-delay: 1.5s;
-}
-
-.smoke:nth-child(5) {
-    left: 65%;
-    top: 60%;
-    animation-delay: 2s;
-}
-
-.smoke:nth-child(6) {
-    left: 80%;
-    top: 75%;
-    animation-delay: 0.2s;
-}
-
-.smoke:nth-child(7) {
-    left: 55%;
-    top: 78%;
-    animation-delay: 0.2s;
-}
-
-.smoke:nth-child(8) {
-    left: 45%;
-    top: 63%;
-    animation-delay: 0.2s;
-}
-
-/* Best Sellers Section */
-#best-sellers {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-}
-
-#best-sellers h2 {
-    color: var(--primary-color);
-}
-
-.best-seller-item {
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 3px solid var(--primary-color);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    color: var(--text-color);
-}
-
-.best-seller-item h4 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.best-seller-item .description {
-    font-style: normal;
-    color: #ccc;
-    margin-bottom: 15px;
-}
-
-.best-seller-item .price {
-    font-size: 1.2rem;
-    color: var(--primary-color);
-}
-
-.blockquote {
-    font-family: var(--heading-font);
-    font-size: 1.3rem;
-    border-left: 3px solid var(--primary-color);
-    padding-left: 1.5rem;
-    margin: 2rem 0;
-}
-
-/* Meet the Team Section */
-.team-member {
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-/* Contact Us Section */
-.contact-form {
-    margin-top: 30px;
-}
-
-.contact-form .form-control {
-    background-color: #333;
-    color: var(--text-color) !important;
-    /* Make sure the color is applied */
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 15px;
-}
-
-.contact-form .form-control::placeholder {
-    color: white;
-    opacity: 0.8;
-}
-
-.contact-form .btn-primary {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .smoke {
-        width: 80px;
-        height: 80px;
-        filter: blur(15px);
-    }
-
-    /* Adjust hero text and image for smaller screens */
-    .hero-content-wrapper {
-        flex-direction: column;
-        /* Stack text and image vertically */
-    }
-
-    .hero-text,
-    .hero-image {
-        width: 100%;
-        /* Full width */
-        text-align: center;
-        /* Center text */
-        padding-right: 0;
-        /* Remove padding */
-    }
-
-    .hero-image {
-        margin-top: 20px;
-        /* Add space above image */
-    }
-
-    /* About section on smaller screens */
-    #about .row {
-        flex-direction: column;
-        /* Stack image and text vertically */
-    }
-
-    #about .col-md-6 {
-        width: 100%;
-        /* Full width for both columns */
-    }
-    /*Hero image*/
-     .hero-image img {
-        border-radius: 0; /* Remove border-radius on smaller screens */
-    }
-    .hero-image-overlay{
-        border-radius: 0;
-    }
-}
-
-.navbar-brand img {
-    height: 75px;
-    width: 150px
-}
-
-/* Hero Section - Explicitly set colors */
-.hero-section .container h1,
-/* Less specific, more reliable */
-.hero-section .container .lead,
-.hero-text p {
-    color: var(--primary-color) !important;
-}
-
-
-/* Combined Selectors for consistent heading colors */
-#about .container h2,
-#team .container h2,
-#contact-us h2,
-#contact h2,
-#best-sellers h2 {
-    color: var(--primary-color) !important;
-}
-
-
-#about .container p,
-#about .container blockquote {
-    color: var(--text-color) !important;
-}
-
-.team-member h4,
-.team-member p {
-    color: var(--text-color) !important;
-}
-
-/* Hero Section Content */
-.hero-content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-    /* Add padding to create space between text/image and edges */
-    padding-left: 5%;
-    /* Add left padding */
-    padding-right: 5%;
-    /* Add right padding */
-}
-
-
-.hero-text {
-    text-align: left;
-    width: 50%;
-    /* Reduced width slightly */
-    padding-right: 30px;
-    /* Increased padding for more space */
-
-}
-
-/* Set explicit text alignment for hero text */
-.hero-text p {
-    text-align: left !important;
-    /* Force left alignment */
-}
-
-
-.hero-image {
-    width: 45%;
-    text-align: right;
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-}
-
-.hero-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    border-radius: 15px;
-    position: relative;
-}
-
-.hero-image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%),
-        linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%),
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%),
-        linear-gradient(to left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%);
-    border-radius: 15px;
-}
-
-/* Center the Hero Section Title and Subtitle */
-/* .hero-section .container h1,  Removed this line */
-.hero-section .container p {
-    text-align: center;
-}
-
-/* Modified h1 styling for hero section */
-.hero-section .container h1 {
-    font-family: var(--heading-font);
-    font-size: 7rem;
-    /* Increased font size to 2x (3.5rem * 2 = 7rem) */
-    color: var(--primary-color);
-    text-align: center;
-    letter-spacing: 0.2em;
-    /* Add letter spacing */
-}
-
-/* Fade effect */
-.fade-in-on-scroll {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s ease-in-out;
-}
-
-.fade-in-on-scroll.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* About Section Fade-in */
-#about p,
-#about blockquote {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s ease-in-out;
-}
-
-#about p.active,
-#about blockquote.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Meet The Team Fade-In */
-.team-member {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s ease-in-out;
-}
-
-.team-member.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Back to Top Button Styles */
-#back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border: none;
-    border-radius: 50%;
-    padding: 10px 15px;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 1001;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease;
-}
-
-#back-to-top:hover {
-    background-color: #e0a800;
-}
-
-/* Ensure images are responsive */
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-}
-
-/* About section specific styles */
-#about .about-image {
-    border-radius: 15px;
-    /* Optional: Add rounded corners to the image */
-    margin-bottom: 20px;
-    /* Add some space below the image on mobile */
-}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phở Lux - Vietnamese Cuisine</title>
+    <meta name="description"
+        content="Authentic Vietnamese Cuisine in Houston, TX.  Featuring delicious Phở, traditional dishes, and a unique dining experience.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="Black-Logo.png" alt="Phở Lux Logo" height="75" width="150">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#best-sellers">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Meet the Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact-us">Talk to Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact & Location</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section (Home) -->
+        <section id="home" class="hero-section">
+            <!-- Reduced number of smoke elements -->
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+            <div class="smoke"></div>
+
+            <div class="container position-relative" style="z-index: 1; padding-top: 100px">
+                <h1
+                    style="font-family: var(--heading-font); font-size: 7rem; color: var(--primary-color); text-align: center; letter-spacing: 0.2em;">
+                    Phở Lux</h1>
+                <p class="lead mt-3"
+                    style="font-size: 1.75rem; color: var(--primary-color); text-align: center;">Authentic Vietnamese
+                    Cuisine</p>
+                <div class="hero-content-wrapper">
+                    <!-- Left: Text Content -->
+                    <div class="hero-text">
+                        <p class="fade-in-on-scroll" style="font-size: 1.5rem; color: var(--text-color)">Phở Lux
+                            introduces a novel dining concept, curated by its chef and owner, offering an unparalleled
+                            Phở
+                            experience for both dine-in and takeout patrons. The restaurant’s distinctive features
+                            include a culinary selection
+                            that
+                            celebrates the chef’s passion for life and exotic cars.</p>
+                    </div>
+
+                    <!-- Right: Image with Fade -->
+                    <div class="hero-image fade-in-on-scroll">
+                        <img src="pho-bowl.png" alt="Bowl of Pho Noodle Soup" loading="lazy">
+                        <div class="hero-image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="Award.png" alt="Restaurant Interior" class="img-fluid about-image">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="text-center mb-5">Our Story</h2>
+                        <p class="fade-in-on-scroll">In 2013, the current chef and owner of Phở Lux introduced Phở Hùng,
+                            which was recognized by renowned food critic Alison Cook as one of Houston’s most
+                            esteemed establishments, earning it a place in both of Cook’s Top 100 restaurants in 2014
+                            and 2015.</p>
+
+                        <blockquote class="blockquote fade-in-on-scroll">
+                            "The moment the steaming bowl of soup lands on my table at Phở Hùng, the rest of the
+                            universe falls away from me. There's only the scent of
+                            scallion and beef broth; the delicate taste of cinnamon on my tongue; the slip and slide
+                            of long springy noodles."
+                        </blockquote>
+
+                        <p class="fade-in-on-scroll">In 2024, the concept of Phở Lux was conceived to commemorate the
+                            chef’s and owner’s pride in being a Houstonian, while simultaneously preserving
+                            traditional Vietnamese cuisine and honoring her passion for automotive enthusiasts. Whether
+                            you’re a phở lover or a curious newcomer, Phở Lux
+                            promises an unforgettable dining experience.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Sellers Section -->
+        <section id="best-sellers" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Best Sellers</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="best-seller-item">
+                            <h4>Phở Đặc Biệt (Beef Phở Soup)</h4>
+                            <p class="description">Traditional beef noodle soup with rare steak, brisket, and rice
+                                noodles.</p>
+                            <span class="price">$12.00</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="best-seller-item">
+                            <h4>Bún Bò Huê (Spicy Vietnamese Beef Noodle Soup)</h4>
+                            <p class="description">Bún Bò Huê is a spicy, flavorful noodle soup from Hue, a city in the
+                                central region of Vietnam</p>
+                            <span class="price">$13.00</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="best-seller-item">
+                            <h4>Durian Coffee (Cà Phê Sầu Riêng)</h4>
+                            <!-- Updated Title -->
+                            <p class="description">Strong Vietnamese coffee infused with a smooth, rich texture and
+                                velvety durian cream.</p> <!-- Updated Description -->
+                            <span class="price">$7.00</span> <!-- Updated Price -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Old Menu Images Section -->
+        <section id="old-menu-images" class="py-5"
+            style="background-color: var(--secondary-color); color: var(--primary-color);">
+            <div class="container text-center">
+                <h2 class="text-center mb-5">Full Menu</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6">
+                        <a href="PhoLUXMenu-2.pdf" target="_blank">
+                            <img src="PhoLUXMenu-2.png" alt="Food Menu" class="img-fluid menu-image" loading="lazy">
+                        </a>
+                        <div><a href="PhoLUXMenu-2.pdf" download class="btn btn-primary mt-2">Download Food Menu
+                                (PDF)</a></div>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="PhoLUXMenu-1.pdf" target="_blank">
+                            <img src="PhoLUX-Menu-1.png" alt="Drinks Menu" class="img-fluid menu-image" loading="lazy">
+                        </a>
+                        <div><a href="PhoLUXMenu-1.pdf" download class="btn btn-primary mt-2">Download Drinks Menu
+                                (PDF)</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet the Team Section -->
+        <section id="team" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Meet the Team</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 team-member fade-in-on-scroll">
+                        <img src="Picture-one.png" alt="Christy Le" class="img-fluid" loading="lazy">
+                        <h4>Christy Le</h4>
+                        <p class="text-muted">Chef and Owner</p>
+                        <p>Self-made entrepreneur with a multimillion-dollar spa sector in Aliana, Texas. Additionally,
+                            the owner is a renowned chef who received a culinary critic award for their recipe, which
+                            was unveiled by Alison Cook. The chef’s restaurant was ranked number one in Houston’s top
+                            100 restaurants in both 2014 and 2015.</p>
+                    </div>
+                    <div class="col-md-4 team-member fade-in-on-scroll">
+                        <img src="Picture-two.png" alt="Pearl Tang" class="img-fluid" loading="lazy">
+                        <h4>Pearl Tang</h4>
+                        <p class="text-muted">Operations Executive</p>
+                        <p>A highly accomplished executive with over 15 years of experience providing strategic
+                            consulting and leadership within the international F&B, luxury fashion, and
+                            beauty/cosmetic spa industries. She has successfully led enterprise value creation
+                            initiatives totaling over $3.5 billion across diverse markets, including the United States,
+                            China, Turkey, Japan, India, and Nepal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section (Form) -->
+        <section id="contact-us" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Talk to Us</h2>
+                <p class="text-center">Whether you're inquiring about reservations, catering services, private event
+                    hosting, menu details, or anything else—our team is here to help. We specialize in creating
+                    unforgettable experiences, including full setup, catering, and hosting for events with 30+
+                    attendees. Let us bring your vision to life!<br><br>
+                    Reach out today—we’d love to discuss your needs.</p> <!-- Updated Text -->
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <form class="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
+                            <!--  REPLACE your_form_id -->
+                            <div class="mb-3">
+                                <label for="name" class="form-label visually-hidden">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label visually-hidden">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label visually-hidden">Message</label>
+                                <textarea class="form-control" rows="4" id="message" placeholder="Message"
+                                    name="message"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (Location) -->
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Contact & Location</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.548632985645!2d-95.56390368489126!3d29.769215381988785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c3b3f3b684a1%3A0x6b494d16a1d4733c!2s111107%201%2F2%20Bellaire%20Blvd%2C%20Houston%2C%20TX%2077072!5e0!3m2!1sen!2sus!4v1716612345678!5m2!1sen!2sus"
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="contact-info">
+                            <h4><i class="bi bi-clock me-2"></i>Store Hours</h4>
+                            <ul class="list-unstyled">
+                                <li>Mon: 9AM - 5PM</li>
+                                <li class="text-danger">Tue: Closed</li>
+                                <li>Wed-Sun: 9AM - 5PM</li>
+                            </ul>
+
+                            <h4 class="mt-4"><i class="bi bi-geo-alt me-2"></i>Address</h4>
+                            <address>
+                                111107 1/2 Bellaire Boulevard<br>
+                                Houston, TX 77072<br>
+                                (Located in Vietnam Shopping Center)
+                            </address>
+
+                            <h4 class="mt-4"><i class="bi bi-envelope me-2"></i>Contact</h4>
+                            <p>
+                                <a href="mailto:phoLux8@gmail.com"
+                                    style="color: var(--text-color)">phoLux8@gmail.com</a><br>
+                                <a href="tel:3464408991" style="color: var(--text-color)">(346) 440-8991</a>
+                            </p>
+
+                            <h4 class="mt-4">Follow Us</h4>
+                            <div class="social-links">
+                                <a href="https://facebook.com/pholux.2024" target="_blank" class="btn btn-outline-light"
+                                    style="color: var(--text-color)" rel="noopener noreferrer"
+                                    aria-label="Visit our Facebook page">
+                                    <i class="bi bi-facebook"></i> Facebook
+                                </a>
+                                <a href="https://instagram.com/phol.ux" target="_blank" class="btn btn-outline-light"
+                                    style="color: var(--text-color)" rel="noopener noreferrer"
+                                    aria-label="Visit our Instagram page">
+                                    <i class="bi bi-instagram"></i> Instagram
+                                </a>
+                                <a href="https://tiktok.com/@pho.lux" target="_blank" class="btn btn-outline-light"
+                                    style="color: var(--text-color)" rel="noopener noreferrer"
+                                    aria-label="Visit our TikTok page">
+                                    <i class="bi bi-tiktok"></i> TikTok
+                                </a>
+                                <a href="https://www.yelp.com/biz/pho-lux-houston" target="_blank"
+                                    class="btn btn-outline-light" style="color: var(--text-color)"
+                                    rel="noopener noreferrer" aria-label="View our Yelp reviews">
+                                    <i class="bi bi-yelp"></i> Yelp Reviews
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Go to top"><i class="bi bi-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
