@@ -18,16 +18,24 @@ faders.forEach(fader => {
     appearOnScroll.observe(fader);
 });
 
-// --- Smoke Animation Logic (Now targets the #about section) ---
+// --- Smoke Animation Logic Removed ---
 
-const smokeElements = document.querySelectorAll('.smoke');
+// Back to Top Button Functionality (remains unchanged)
+const backToTopButton = document.getElementById('back-to-top');
 
-function reanimateSmoke() {
-    smokeElements.forEach(smoke => {
-        // 1. Reset animation
-        smoke.style.animation = 'none';
-        smoke.offsetHeight; // Trigger reflow
+// Show or hide the button based on scroll position
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        backToTopButton.style.display = 'block';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+});
 
-        // 2. Randomize size, blur, and *position*
-        const size = Math.floor(Math.random() * (200 - 80 + 1)) + 80;
-        const blur = Math.floor(Math.random() * (30 - 1
+// Scroll to top when the button is clicked
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
