@@ -154,7 +154,7 @@ body {
     }
 
     .hero-text,
-    .hero-image {
+     .hero-image {
         width: 100%;
         /* Full width */
         text-align: center;
@@ -199,28 +199,28 @@ body {
 .hero-section .container h1,
 /* Less specific, more reliable */
 .hero-section .container .lead,
-.hero-text p {
+ .hero-text p {
     color: var(--primary-color) !important;
 }
 
 
 /* Combined Selectors for consistent heading colors */
 #about .container h2,
-#team .container h2,
-#contact-us h2,
-#contact h2,
-#best-sellers h2 {
+ #team .container h2,
+ #contact-us h2,
+ #contact h2,
+ #best-sellers h2 {
     color: var(--primary-color) !important;
 }
 
 
 #about .container p,
-#about .container blockquote {
+ #about .container blockquote {
     color: var(--text-color) !important;
 }
 
 .team-member h4,
-.team-member p {
+ .team-member p {
     color: var(--text-color) !important;
 }
 
@@ -299,7 +299,17 @@ body {
     text-align: center;
     letter-spacing: 0.2em;
     /* Add letter spacing */
+    transition: transform 0.2s ease-in-out;
+    /* Add transition for smooth animation */
 }
+
+.hero-section .container h1:hover {
+    transform: scale(1.1);
+    /* Scale up by 10% on hover */
+    cursor: pointer;
+    /* Change cursor to indicate interactivity */
+}
+
 
 /* Fade effect */
 .fade-in-on-scroll {
@@ -315,14 +325,14 @@ body {
 
 /* About Section Fade-in */
 #about p,
-#about blockquote {
+ #about blockquote {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.8s ease-in-out;
 }
 
 #about p.active,
-#about blockquote.active {
+ #about blockquote.active {
     opacity: 1;
     transform: translateY(0);
 }
@@ -354,7 +364,7 @@ body {
     cursor: pointer;
     z-index: 1001;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: background-color: 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 #back-to-top:hover {
