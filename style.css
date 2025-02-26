@@ -127,11 +127,13 @@ body {
     top: 75%;
     animation-delay: 0.2s;
 }
+
 .smoke:nth-child(7) {
     left: 55%;
     top: 78%;
     animation-delay: 0.2s;
 }
+
 .smoke:nth-child(8) {
     left: 45%;
     top: 63%;
@@ -205,7 +207,8 @@ body {
 
 .contact-form .form-control {
     background-color: #333;
-    color: var(--text-color);
+    color: var(--text-color) !important;
+    /* Make sure the color is applied */
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -257,11 +260,13 @@ body {
 
     /* About section on smaller screens */
     #about .row {
-        flex-direction: column; /* Stack image and text vertically */
+        flex-direction: column;
+        /* Stack image and text vertically */
     }
 
     #about .col-md-6 {
-        width: 100%; /* Full width for both columns */
+        width: 100%;
+        /* Full width for both columns */
     }
 }
 
@@ -278,39 +283,25 @@ body {
     color: var(--primary-color) !important;
 }
 
-/* About Section - Corrected color rules */
-#about .container h2 {
-    /* Less specific selector */
+
+/* Combined Selectors for consistent heading colors */
+#about .container h2,
+#team .container h2,
+#contact-us h2,
+#contact h2,
+#best-sellers h2 {
     color: var(--primary-color) !important;
 }
+
 
 #about .container p,
 #about .container blockquote {
     color: var(--text-color) !important;
 }
 
-/* Team Section */
-#team .container h2 {
-    /* Less specific selector */
-    color: var(--primary-color) !important;
-}
-
-.team-member h4 {
-    color: var(--text-color) !important;
-}
-
+.team-member h4,
 .team-member p {
     color: var(--text-color) !important;
-}
-
-/* Contact Us Section */
-#contact-us h2 {
-    color: var(--primary-color);
-}
-
-/* Contact & Location Section */
-#contact h2 {
-    color: var(--primary-color);
 }
 
 /* Hero Section Content */
@@ -447,6 +438,8 @@ body {
 
 /* About section specific styles */
 #about .about-image {
-    border-radius: 15px; /* Optional: Add rounded corners to the image */
-    margin-bottom: 20px; /* Add some space below the image on mobile */
+    border-radius: 15px;
+    /* Optional: Add rounded corners to the image */
+    margin-bottom: 20px;
+    /* Add some space below the image on mobile */
 }
