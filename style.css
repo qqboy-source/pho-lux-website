@@ -365,9 +365,20 @@ body {
 }
 
 /* Center the Hero Section Title and Subtitle */
-.hero-section .container h1,
+/* .hero-section .container h1,  Removed this line */
 .hero-section .container p {
     text-align: center;
+}
+
+/* Modified h1 styling for hero section */
+.hero-section .container h1 {
+    font-family: var(--heading-font);
+    font-size: 7rem;
+    /* Increased font size to 2x (3.5rem * 2 = 7rem) */
+    color: var(--primary-color);
+    text-align: center;
+    letter-spacing: 0.2em;
+    /* Add letter spacing */
 }
 
 /* Fade effect */
