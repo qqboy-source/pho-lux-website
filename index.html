@@ -17,6 +17,11 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+     <script>
+        if (window.location.hostname !== "www.pho-lux.com" && window.location.protocol === "http:") {
+            window.location.href = "https://www.pho-lux.com" + window.location.pathname + window.location.search + window.location.hash;
+    }
+    </script>
 </head>
 
 <body>
@@ -281,10 +286,10 @@
         </section>
     </main>
 
-    <footer>
-    <div class="footer-bar"></div>
-    <p class="text-center" style="color: var(--text-color); margin-bottom: 0; padding-bottom: 10px;  padding-top: 10px; ">© <span id="currentYear"></span> PHO LUX. All rights reserved.</p>
-  </footer>
+     <footer>
+        <div class="footer-bar"></div>
+          <p class="text-center" style="color: var(--text-color); margin-bottom: 0; padding-bottom: 10px; padding-top:10px;">© <span id="currentYear"></span> PHO LUX. All rights reserved.</p>
+    </footer>
 
     <!-- Back to Top Button -->
     <button id="back-to-top" title="Go to top"><i class="bi bi-arrow-up"></i></button>
@@ -296,7 +301,7 @@
             Formspree.submissionHandler({
                 form: form,
                 button: form.querySelector("button[type=submit]"), // Select the submit button
-                //  debug: true // Uncomment this for debugging during development
+                //debug: true  // Uncomment this for debugging during development
             });
         });
     </script>
@@ -307,6 +312,11 @@
         // Dynamically update the current year in the copyright notice
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
+      <script>
+    if (window.location.hostname !== "www.pho-lux.com" && window.location.protocol === "http:") {
+        window.location.href = "https://www.pho-lux.com" + window.location.pathname + window.location.search + window.location.hash;
+    }
+</script>
 </body>
 
 </html>
