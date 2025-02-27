@@ -231,12 +231,10 @@ body {
 }
 
 /*Set color for team section*/
-/* Corrected selector to apply orange to both name and title */
 #team h4,
 #team .team-title {
     color: var(--primary-color) !important;
 }
-
 #team p{
   color: var(--text-color) !important;
 }
@@ -342,14 +340,31 @@ body {
     color: var(--secondary-color) !important; /* Set text color to secondary (black) on hover*/
      /* Ensure the hover effect applies */
 }
-/* Style for the download buttons */
+/* Style for the download buttons - CORRECTED */
 #old-menu-images .btn-download {
-    background-color: var(--primary-color); /* Orange background */
-    border-color:     var(--primary-color);    /* Orange border    */
-    color: var(--secondary-color);          /* Black text  */
+    background-color: var(--primary-color);  /* Orange background */
+    border-color: var(--primary-color);      /* Orange border      */
+    color: var(--secondary-color);            /* Black text      */
 }
+
  #old-menu-images .btn-download:hover {
-    background-color: #b96218;   /* Darker orange on hover */
-    border-color:     var(--primary-color);
-    color: var(--secondary-color) !important; /* orange text  on hover*/
+    background-color: #b96218; /*  Darker orange on hover */
+    border-color: var(--primary-color);
+    color: var(--secondary-color) !important; /* Keep text black on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--secondary-color); /* Black background */
+    color: var(--text-color);              /* White text */
+    text-align: center;                   /* Center the text */
+    padding: 10px 0;    /* Padding top and bottom */
+    width: 100%;
+}
+
+/* Orange Bar Styles (like the navbar) */
+.footer-bar {
+  height: 3px;          /* Same height as navbar border */
+  background-color: var(--primary-color); /* Orange color */
+  width: 100%;
 }
