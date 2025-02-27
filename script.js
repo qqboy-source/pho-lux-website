@@ -40,4 +40,4 @@ backToTopButton.addEventListener('click', () => {
     });
 });
 
-// Removed the image resizing JavaScript
+// Removed image height adjustment
