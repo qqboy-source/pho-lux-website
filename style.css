@@ -346,25 +346,17 @@ body {
     border-color: var(--primary-color);      /* Orange border      */
     color: var(--secondary-color);            /* Black text      */
 }
-
- #old-menu-images .btn-download:hover {
-    background-color: #b96218; /*  Darker orange on hover */
+#old-menu-images .btn-download:hover {
+    background-color: #b96218;   /* Darker orange on hover */
     border-color: var(--primary-color);
-    color: var(--secondary-color) !important; /* Keep text black on hover */
+    color: var(--secondary-color) !important; /*  Keep text black on hover! */
 }
-
-/* Footer Styles */
-footer {
-    background-color: var(--secondary-color); /* Black background */
-    color: var(--text-color);              /* White text */
-    text-align: center;                   /* Center the text */
-    padding: 10px 0;    /* Padding top and bottom */
-    width: 100%;
-}
-
-/* Orange Bar Styles (like the navbar) */
 .footer-bar {
-  height: 3px;          /* Same height as navbar border */
-  background-color: var(--primary-color); /* Orange color */
+  height: 3px;
+  background-color: var(--primary-color); /* Orange */
   width: 100%;
+}
+
+footer p {
+  padding-top: 1rem; /* Add padding above the text */
 }
