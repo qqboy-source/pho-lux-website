@@ -1,12 +1,9 @@
 :root {
-    --heading-font: 'Playfair Display', serif;
-    --body-font: 'Lato', sans-serif;
-    --primary-color: #ffc107;
-    /* Yellow */
-    --secondary-color: #000;
-    /* Black */
-    --text-color: #fff;
-    /* White */
+  --heading-font: 'Playfair Display', serif;
+  --body-font: 'Lato', sans-serif;
+  --primary-color: #e67e22;   /*  Orange color */
+  --secondary-color: #000;  /* Black */
+  --text-color: #fff;        /* White */
 }
 
 body {
@@ -14,10 +11,8 @@ body {
     color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.6;
-    padding-top: 70px;
-    /* Adjust to account for fixed navbar */
-    position: relative;
-    /* Needed for the back-to-top button positioning */
+    padding-top: 70px; /* Adjust to account for fixed navbar */
+    position: relative; /* Needed for the back-to-top button positioning */
 }
 
 /* Navbar Styles */
@@ -43,15 +38,42 @@ body {
 
 /* Hero Section Styles */
 .hero-section {
-    background-image: url('hero-bg.jpg');
-    /*  Make sure this image exists! */
-    background-size: cover;
-    background-position: center;
-    min-height: 70vh;
-    position: relative;
-    overflow: hidden;
+    background-color: var(--secondary-color); /*  Background color instead of image */
+    background-image: none; /* Remove background image */
+    min-height: auto; /* Remove minimum height constraint */
+    padding-bottom: 20px; /* Add some padding at the bottom */
+    text-align: center; /* Center-align content */
+}
+.full-width-image-container {
+    width: 100%; /* Full width */
+    overflow: hidden; /* Prevent horizontal scrolling */
 }
 
+.full-width-image-container img {
+    width: 100%; /* Make image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any extra space below the image */
+}
+
+.hero-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%),
+        linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%),
+        linear-gradient(to left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%);
+    border-radius: 15px;
+}
+ /* Remove hero image styles, keep overlay. Set border radius 0 in media*/
+.hero-image {
+    border-radius: 0;
+}
+.hero-image img {
+    border-radius: 0;
+}
 /* Removed all smoke-related CSS */
 
 /* Best Sellers Section */
@@ -121,6 +143,11 @@ body {
     margin-bottom: 15px;
 }
 
+/* Changed team member name color */
+.team-name {
+    color: var(--primary-color);
+}
+
 /* Contact Us Section */
 .contact-form {
     margin-top: 30px;
@@ -128,8 +155,7 @@ body {
 
 .contact-form .form-control {
     background-color: #333;
-    color: var(--text-color) !important;
-    /* Make sure the color is applied */
+    color: var(--text-color) !important; /* Make sure the color is applied */
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -152,47 +178,34 @@ body {
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-    /* Removed smoke styles */
+  /* Removed smoke styles */
 
-    /* Adjust hero text and image for smaller screens */
-    .hero-content-wrapper {
-        flex-direction: column;
-        /* Stack text and image vertically */
-    }
+  /* Adjust hero text and image for smaller screens */
+  .hero-content-wrapper {
+    flex-direction: column; /* Stack text and image vertically */
+  }
 
-    .hero-text,
-     .hero-image {
-        width: 100%;
-        /* Full width */
-        text-align: center;
-        /* Center text */
-        padding-right: 0;
-        /* Remove padding */
-    }
+  .hero-text,
+  .hero-image {
+    width: 100%; /* Full width */
+    text-align: center; /* Center text */
+    padding-right: 0; /* Remove padding */
+  }
 
-    .hero-image {
-        margin-top: 20px;
-        /* Add space above image */
-    }
+  .hero-image {
+    margin-top: 20px; /* Add space above image */
+  }
 
-    /* About section on smaller screens */
-    #about .row {
-        flex-direction: column;
-        /* Stack image and text vertically */
-    }
+  /* About section on smaller screens */
+  #about .row {
+    flex-direction: column; /* Stack image and text vertically */
+  }
 
-    #about .col-md-6 {
-        width: 100%;
-        /* Full width for both columns */
-    }
+  #about .col-md-6 {
+    width: 100%; /* Full width for both columns */
+  }
 
-    /*Hero image*/
-    .hero-image img {
-        border-radius: 0;
-        /* Remove border-radius on smaller screens */
-    }
-
-    .hero-image-overlay {
+ .hero-image-overlay{
         border-radius: 0;
     }
 }
@@ -206,90 +219,33 @@ body {
 .hero-section .container h1,
 /* Less specific, more reliable */
 .hero-section .container .lead,
- .hero-text p {
+.hero-text p {
     color: var(--primary-color) !important;
 }
 
 
 /* Combined Selectors for consistent heading colors */
 #about .container h2,
- #team .container h2,
- #contact-us h2,
- #contact h2,
- #best-sellers h2 {
+#team .container h2,
+#contact-us h2,
+#contact h2,
+#best-sellers h2 {
     color: var(--primary-color) !important;
 }
 
 
 #about .container p,
- #about .container blockquote {
+#about .container blockquote {
     color: var(--text-color) !important;
 }
 
-.team-member h4,
- .team-member p {
+/* .team-member h4,  Removed this - we're using .team-name now */
+.team-member p {
     color: var(--text-color) !important;
 }
 
 /* Hero Section Content */
-.hero-content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-    /* Add padding to create space between text/image and edges */
-    padding-left: 5%;
-    /* Add left padding */
-    padding-right: 5%;
-    /* Add right padding */
-}
-
-
-.hero-text {
-    text-align: left;
-    width: 50%;
-    /* Reduced width slightly */
-    padding-right: 30px;
-    /* Increased padding for more space */
-
-}
-
-/* Set explicit text alignment for hero text */
-.hero-text p {
-    text-align: left !important;
-    /* Force left alignment */
-}
-
-
-.hero-image {
-    width: 45%;
-    text-align: right;
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-}
-
-.hero-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    border-radius: 15px;
-    position: relative;
-}
-
-.hero-image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%),
-        linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%),
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%),
-        linear-gradient(to left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%);
-    border-radius: 15px;
-}
+/* Removed hero-content-wrapper, hero-text, hero-image styles */
 
 /* Center the Hero Section Title and Subtitle */
 /* .hero-section .container h1,  Removed this line */
@@ -332,14 +288,14 @@ body {
 
 /* About Section Fade-in */
 #about p,
- #about blockquote {
+#about blockquote {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.8s ease-in-out;
 }
 
 #about p.active,
- #about blockquote.active {
+#about blockquote.active {
     opacity: 1;
     transform: translateY(0);
 }
@@ -371,7 +327,7 @@ body {
     cursor: pointer;
     z-index: 1001;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: background-color: 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 #back-to-top:hover {
