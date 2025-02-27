@@ -339,16 +339,16 @@ body {
     color: var(--secondary-color) !important; /* Set text color to secondary (black) on hover*/
      /* Ensure the hover effect applies */
 }
-/* Style for the download buttons */
-#old-menu-images .btn-primary {
+
+/* Style for the download buttons - CORRECTED */
+#old-menu-images .btn-download {
     background-color: var(--primary-color); /* Orange background */
-    color: var(--secondary-color);        /* Black text */
-    border-color: var(--primary-color);    /* Orange border */
+    border-color:     var(--primary-color);    /* Orange border    */
+    color: var(--secondary-color);          /* Black text    */
 }
 
-#old-menu-images .btn-primary:hover {
-     /* Darker orange on hover */
-    border-color:     var(--primary-color);    /* Orange border on hover */
-    color: var(--secondary-color) !important;
-    background-color: #b96218;
+#old-menu-images .btn-download:hover {
+    background-color: #b96218;  /* Darker orange on hover */
+     border-color: var(--primary-color); /* Orange border */
+    color: var(--secondary-color) !important; /* Keep text black on hover */
 }
