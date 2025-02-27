@@ -17,11 +17,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-     <script>
-        if (window.location.hostname !== "www.pho-lux.com" && window.location.protocol === "http:") {
-            window.location.href = "https://www.pho-lux.com" + window.location.pathname + window.location.search + window.location.hash;
-    }
-    </script>
 </head>
 
 <body>
@@ -126,32 +121,33 @@
         </section>
 
         <!-- Old Menu Images Section -->
-        <section id="old-menu-images" class="py-5"
-            style="background-color: var(--secondary-color); color: var(--primary-color);">
-            <div class="container text-center">
-                <h2 class="text-center mb-5">Full Menu</h2>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-6">
-                        <!-- Link to the PDF, and a separate image for preview -->
-                         <a href="PhoLUXMenu-2.pdf">  <!-- Removed target="_blank" -->
-                            <img src="PhoLUXMenu-2.png" alt="Food Menu" class="img-fluid menu-image" loading="lazy">
-                         </a>
-                         <div>
-                             <a href="PhoLUXMenu-2.pdf" download class="btn btn-download mt-2">Download Food Menu (PDF)</a>  <!-- Corrected class -->
-                          </div>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- Link to the PDF, and a separate image for preview -->
-                         <a href="PhoLUXMenu-1.pdf">   <!-- Removed target="_blank" -->
-                            <img src="PhoLUXMenu-1.png" alt="Drinks Menu" class="img-fluid menu-image" loading="lazy">  <!-- Corrected image source -->
-                        </a>
-                        <div>
-                            <a href="PhoLUXMenu-1.pdf" download class="btn btn-download mt-2">Download Drinks Menu (PDF)</a> <!-- Corrected class -->
-                        </div>
-                    </div>
+<section id="old-menu-images" class="py-5" style="background-color: var(--secondary-color); color: var(--primary-color);">
+    <div class="container text-center">
+        <h2 class="text-center mb-5">Full Menu</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6">
+                <!-- Link to the PDF, and a separate image for preview -->
+                <a href="PhoLUXMenu-2.pdf">
+                    <img src="PhoLUXMenu-2.png" alt="Food Menu" class="img-fluid menu-image" loading="lazy">
+                </a>
+                <div>
+                    <!-- Use btn and btn-download classes for proper styling -->
+                    <a href="PhoLUXMenu-2.pdf" download class="btn btn-download mt-2">Download Food Menu (PDF)</a>
                 </div>
             </div>
-        </section>
+            <div class="col-md-6">
+                <!-- Link to the PDF, and a separate image for preview -->
+                <a href="PhoLUXMenu-1.pdf">
+                    <img src="PhoLUXMenu-1.png" alt="Drinks Menu" class="img-fluid menu-image" loading="lazy">
+                </a>
+                <div>
+                    <!-- Use btn and btn-download classes for proper styling -->
+                    <a href="PhoLUXMenu-1.pdf" download class="btn btn-download mt-2">Download Drinks Menu (PDF)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- Meet the Team Section -->
         <section id="team" class="py-5">
@@ -160,24 +156,24 @@
                 <div class="row justify-content-center">
                     <div class="col-md-4 team-member fade-in-on-scroll">
                         <img src="Picture-one.png" alt="Christy Le" class="img-fluid" loading="lazy">
-                        <h4 class="team-name">Christy Le</h4> <!-- Added class for styling -->
-                        <p class="text-muted team-title">Chef and Owner</p> <!-- Added class for team titles -->
+                        <h4 class="team-name">Christy Le</h4>
+                        <p class="text-muted team-title">Chef and Owner</p>
                         <p class = "team-description">Self-made entrepreneur with a multimillion-dollar spa sector in
                             Aliana, Texas. Additionally,
                             the owner is a renowned chef who received a culinary critic award for their recipe, which
                             was unveiled by Alison Cook. The chef’s restaurant was ranked number one in Houston’s top
-                            100 restaurants in both 2014 and 2015.</p> <!-- Increased font size -->
+                            100 restaurants in both 2014 and 2015.</p>
                     </div>
                     <div class="col-md-4 team-member fade-in-on-scroll">
                         <img src="Picture-two.png" alt="Pearl Tang" class="img-fluid" loading="lazy">
-                        <h4 class="team-name">Pearl Tang</h4> <!-- Added class for styling -->
-                        <p class="text-muted team-title">Operations Executive</p> <!-- Added class for team titles -->
+                        <h4 class="team-name">Pearl Tang</h4>
+                        <p class="text-muted team-title">Operations Executive</p>
                         <p class = "team-description">A highly accomplished executive with over 15 years of experience
                             providing strategic
                             consulting and leadership within the international F&B, luxury fashion, and
                             beauty/cosmetic spa industries. She has successfully led enterprise value creation
                             initiatives totaling over $3.5 billion across diverse markets, including the United States,
-                            China, Turkey, Japan, India, and Nepal.</p> <!-- Increased font size -->
+                            China, Turkey, Japan, India, and Nepal.</p>
                     </div>
                 </div>
             </div>
@@ -308,11 +304,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-      <script>
+     <script>
         // Dynamically update the current year in the copyright notice
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
-      <script>
+     <script>
     if (window.location.hostname !== "www.pho-lux.com" && window.location.protocol === "http:") {
         window.location.href = "https://www.pho-lux.com" + window.location.pathname + window.location.search + window.location.hash;
     }
