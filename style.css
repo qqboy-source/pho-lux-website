@@ -142,16 +142,14 @@ body {
 .team-description{
     font-size: 1.3rem;
 }
-/* Changed team member name color */
-.team-name {
-    color: var(--primary-color);
-    font-size: 1.3rem; /* Make team names same size as descriptions */
+
+/* Team member name and title color */
+.team-name,
+.team-title {
+    color: var(--primary-color);  /* Use the primary color for both */
+    font-size: 1.3rem;
 }
 
-.team-title {
-    font-size: 1.3rem;  /* Equalize team title font size */
-    color: var(--primary-color);  /*  Set team title color */
-}
 
 /* Contact Us Section */
 .contact-form {
@@ -229,11 +227,8 @@ body {
 
 /*Set color for team section*/
 #team h4,
-#team .team-title {  /*  Corrected selector here! */
-    color: var(--primary-color) !important;
-}
-#team p{
-  color: var(--text-color) !important;
+#team p {
+    color: var(--text-color) !important;
 }
 
 /* Center the Hero Section Title and Subtitle */
@@ -306,7 +301,7 @@ body {
 /* Style for the "Talk to Us" paragraph */
 .talk-to-us-text {
     font-size: 1.2rem; /* Increased font size */
-    color: var(--text-color)
+    color: var(--text-color);
 }
 .map-container {
   position: relative;
