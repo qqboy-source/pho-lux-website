@@ -142,14 +142,16 @@ body {
 .team-description{
     font-size: 1.3rem;
 }
-
-/* Team member name and title color */
-.team-name,
-.team-title {
-    color: var(--primary-color);  /* Use the primary color for both */
-    font-size: 1.3rem;
+/* Changed team member name color */
+.team-name {
+    color: var(--primary-color);
+    font-size: 1.3rem; /* Make team names same size as descriptions */
 }
 
+.team-title {
+    font-size: 1.3rem;  /* Equalize team title font size */
+    color: var(--primary-color);  /*  Set team title color */
+}
 
 /* Contact Us Section */
 .contact-form {
@@ -224,12 +226,18 @@ body {
 #about blockquote {
     color: var(--text-color) !important;
 }
-
-/*Set color for team section*/
-#team h4,
-#team p {
-    color: var(--text-color) !important;
+/*Correct about text color*/
+#team .team-description{
+     color: var(--text-color) !important;/* add team description color */
 }
+
+/* Set color and style for team names and titles */
+#team h4,
+#team .team-title {
+    color: var(--primary-color) !important; /* Orange for names and titles */
+    font-size: 1.3rem;  /* Consistent font size */
+}
+
 
 /* Center the Hero Section Title and Subtitle */
 .hero-section .container p {
