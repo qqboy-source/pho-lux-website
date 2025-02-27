@@ -1,451 +1,409 @@
 :root {
-    --heading-font: 'Playfair Display', serif;
-    --body-font: 'Lato', sans-serif;
-    --primary-color: #ffc107;  /* Yellow */
-    --secondary-color: #000;  /* Black */
-    --text-color: #fff;      /* White */
+  --heading-font: 'Playfair Display', serif;
+  --body-font: 'Lato', sans-serif;
+  --primary-color: #e67e22;
+  /* Orange color */
+  --secondary-color: #000;
+  /* Black */
+  --text-color: #fff;
+  /* White */
 }
 
 body {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    font-family: var(--body-font);
-    line-height: 1.6;
-    padding-top: 70px; /* Adjust to account for fixed navbar */
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  line-height: 1.6;
+  padding-top: 70px;
+  /* Adjust to account for fixed navbar */
+  position: relative;
+  /* Needed for the back-to-top button positioning */
 }
 
 /* Navbar Styles */
 .navbar {
-    background-color: var(--secondary-color) !important; /* Back to Black */
-    width: 100%;
-    z-index: 1000;
-    border-bottom: 3px solid var(--primary-color); /* Yellow bottom border */
+  background-color: var(--secondary-color) !important;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 3px solid var(--primary-color);
 }
 
-
 .navbar-brand {
-    color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
 }
 
 .nav-link {
-    color: var(--text-color) !important;
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  color: var(--text-color) !important;
+  transition: color 0.3s ease;
 }
 
-/* Navbar Hover Effect - No more .active class needed */
 .nav-link:hover {
-    color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
 }
 
-
-/* Hero Section Styles */
+/* --- Hero Section Styles (Text Only) --- */
 .hero-section {
-    background-image: url('hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 70vh;
-    position: relative;
-    overflow: hidden;
+  background-color: var(--secondary-color);
+  /* Keep background black */
+  padding-top: 150px;
+  /* Space for fixed navbar + some extra space */
+  text-align: center;
+  /* Center the text */
 }
 
-/* Smoke Styles */
-.smoke {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    pointer-events: none;
-    animation: fastBlow 3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
-    opacity: 0;
-    filter: blur(30px);
-    background: radial-gradient(circle at center,
-        rgba(255, 255, 255, 0.4) 0%,
-        rgba(255, 255, 255, 0.1) 70%,
-        rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-    /* Ensure smoke is above hero text */
+/* Hero Image Section Styles */
+#hero-image {
+  background-color: var(--secondary-color);
+  /* Consistent background */
+  padding: 20px 0;
+  /* Add some padding around the image */
+  text-align: center;
+  /* Center the image horizontally within its container */
 }
 
-@keyframes fastBlow {
-    0% {
-        transform: translateY(30px) translateX(-20px) scale(0.2);
-        opacity: 0.5;
-    }
-
-    20% {
-        opacity: 0.6;
-    }
-
-    80% {
-        transform: translateY(-150px) translateX(150px) scale(2);
-        opacity: 0.05;
-    }
-
-    100% {
-        transform: translateY(-250px) translateX(200px) scale(3);
-        opacity: 0;
-    }
+#hero-image img {
+  max-width: 100%;
+  /*  Make sure image doesn't overflow */
+  height: auto;
+  /*  Preserve aspect ratio */
+  display: block;
+  /* Remove extra space below inline elements */
+  margin: 0 auto;
+  /*  Center horizontally */
 }
 
-/*Positions for the smoke*/
-.smoke:nth-child(1) {
-    left: 5%;
-    top: 70%;
-    animation-delay: 0s;
+/* --- Modified h1 styling for hero section --- */
+.hero-heading {
+  font-family: var(--heading-font);
+  font-size: 7rem;
+  color: var(--primary-color);
+  /* Orange color */
+  text-align: center;
+  letter-spacing: 0.2em;
+  transition: transform 0.2s ease-in-out;
+  /*  Keep the transition */
+  margin-bottom: 0.5em; /* Add space below the heading */
 }
 
-.smoke:nth-child(2) {
-    left: 15%;
-    top: 75%;
-    animation-delay: 0.5s;
+.hero-heading:hover {
+  transform: scale(1.1);
+  /* Keep the hover effect */
+  cursor: pointer;
 }
 
-.smoke:nth-child(3) {
-    left: 25%;
-    top: 65%;
-    animation-delay: 1s;
-}
-
-.smoke:nth-child(4) {
-    left: 35%;
-    top: 70%;
-    animation-delay: 1.5s;
-}
-
-.smoke:nth-child(5) {
-    left: 45%;
-    top: 60%;
-    animation-delay: 2s;
-}
-
-.smoke:nth-child(6) {
-    left: 55%;
-    top: 75%;
-    animation-delay: 0.2s;
-}
-
-.smoke:nth-child(7) {
-    left: 65%;
-    top: 65%;
-    animation-delay: 0.7s;
-}
-
-.smoke:nth-child(8) {
-    left: 75%;
-    top: 72%;
-    animation-delay: 1.2s;
-}
-
-.smoke:nth-child(9) {
-    left: 85%;
-    top: 68%;
-    animation-delay: 1.7s;
-}
-
-.smoke:nth-child(10) {
-    left: 10%;
-    top: 63%;
-    animation-delay: 2.2s;
-}
-
-.smoke:nth-child(11) {
-    left: 20%;
-    top: 77%;
-    animation-delay: 0.4s;
-}
-
-.smoke:nth-child(12) {
-    left: 30%;
-    top: 67%;
-    animation-delay: 0.9s;
-}
-
-.smoke:nth-child(13) {
-    left: 40%;
-    top: 72%;
-    animation-delay: 1.4s;
-}
-
-.smoke:nth-child(14) {
-    left: 50%;
-    top: 62%;
-    animation-delay: 1.9s;
-}
-
-.smoke:nth-child(15) {
-    left: 60%;
-    top: 67%;
-    animation-delay: 2.4s;
-}
-
-.smoke:nth-child(16) {
-    left: 70%;
-    top: 70%;
-    animation-delay: 0.1s;
-}
-
-.smoke:nth-child(17) {
-    left: 80%;
-    top: 73%;
-    animation-delay: 0.6s;
-}
-
-.smoke:nth-child(18) {
-    left: 90%;
-    top: 66%;
-    animation-delay: 1.1s;
-}
-
-.smoke:nth-child(19) {
-    left: 5%;
-    top: 61%;
-    animation-delay: 1.6s;
-}
-
-.smoke:nth-child(20) {
-    left: 15%;
-    top: 79%;
-    animation-delay: 2.1s;
-}
+/* Removed all smoke-related CSS */
 
 /* Best Sellers Section */
 #best-sellers {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+  background-color: var(--secondary-color);
+  color: var(--text-color);
 }
 
 #best-sellers h2 {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
-/* Option 2: Slightly Transparent Black with Yellow Border*/
 .best-seller-item {
-    background-color: rgba(0, 0, 0, 0.7);  /* Semi-transparent black */
-    border: 3px solid var(--primary-color); /* Yellow border */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    color: var(--text-color);
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 3px solid var(--primary-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: var(--text-color);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  /* Add transition */
 }
 
+.best-seller-item:hover {
+  transform: scale(1.05);
+  /* Scale up slightly on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  /* Increase box-shadow on hover */
+  cursor: pointer;
+}
 
 .best-seller-item h4 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-    font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .best-seller-item .description {
-    font-style: normal;
-    color: #ccc;
-    margin-bottom: 15px;
+  font-style: normal;
+  color: #ccc;
+  margin-bottom: 15px;
 }
 
 .best-seller-item .price {
-    font-size: 1.2rem;
-    color: var(--primary-color);
+  font-size: 1.2rem;
+  color: var(--primary-color);
 }
 
 .blockquote {
-    font-family: var(--heading-font);
-    font-size: 1.3rem;
-    border-left: 3px solid var(--primary-color);
-    padding-left: 1.5rem;
-    margin: 2rem 0;
+  font-family: var(--heading-font);
+  border-left: 3px solid var(--primary-color);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
 }
 
 /* Meet the Team Section */
 .team-member {
-    margin-bottom: 30px;
-    text-align: center;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-description {
+  font-size: 1.3rem;
+}
+
+/* Changed team member name color */
+.team-name {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  /* Make team names same size as descriptions */
+}
+
+.team-title {
+  font-size: 1.3rem;
+  /* Equalize team title font size */
+  color: var(--primary-color);
+  /*  Set team title color */
 }
 
 /* Contact Us Section */
 .contact-form {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .contact-form .form-control {
-    background-color: #333;
-    color: var(--text-color);
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 15px;
+  background-color: #333;
+  color: var(--text-color) !important;
+  /* Make sure the color is applied */
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .contact-form .form-control::placeholder {
-    color: white;
-    opacity: 0.8;
+  color: white;
+  opacity: 0.8;
 }
 
 .contact-form .btn-primary {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-    .smoke {
-        width: 80px;
-        height: 80px;
-        filter: blur(15px);
-    }
+  .hero-section {
+    height: auto;
+    /* Let the content determine height on smaller screens */
+    padding-bottom: 20px;
+    /* Ensure some padding at the bottom */
+  }
+
+  /* About section on smaller screens */
+  #about .row {
+    flex-direction: column;
+    /* Stack image and text vertically */
+  }
+
+  #about .col-md-6 {
+    width: 100%;
+    /* Full width for both columns */
+  }
+
+  /* make the map smaller */
+  .map-container iframe {
+    height: 300px;
+    /* Adjust height for smaller screens */
+  }
 }
 
 .navbar-brand img {
-    height: 75px;
-    width: 150px
+  height: 75px;
+  width: 150px
 }
 
-/*Hero Section - Explicitly set colors */
-/* Use direct child selectors for higher specificity */
-.hero-section > .container > h1,
-.hero-section > .container > .lead,
-.hero-text > p {
-    color: var(--primary-color) !important;  /* Force yellow color */
+/*  Explicitly set colors */
+.hero-section .container .lead {
+  color: var(--primary-color) !important;
+  /*  Hero section subheading */
 }
 
-
-/* About Section - Corrected color rules */
-/* Use direct child selectors for higher specificity */
-#about > .container > .row > .col-lg-8 > h2 {
-    color: var(--primary-color) !important; /* Force yellow for heading */
+/*  Consistent heading colors */
+#about .container h2,
+  /* About section heading */
+  #team .container h2,
+  /* Team section heading */
+  #contact-us h2,
+  /* Contact Us heading */
+  #contact h2,
+  /* Contact & Location heading */
+  #best-sellers h2 {
+  /* Best Sellers heading */
+  color: var(--primary-color) !important;
 }
 
-#about > .container > .row > .col-lg-8 > p,
-#about > .container > .row > .col-lg-8 > blockquote {
-    color: var(--text-color) !important;  /* Force white text */
+/*Correct about text color*/
+#about p,
+#about blockquote {
+  color: var(--text-color) !important;
 }
 
-/* Team Section */
-/* Use direct child selectors for higher specificity */
-#team > .container > h2 {
-     color: var(--primary-color) !important; /* Force yellow */
+/*Set color for team section*/
+#team h4,
+#team .team-title {
+  /*  Corrected selector here! */
+  color: var(--primary-color) !important;
 }
 
-
-/* Make Team Member Text and Titles Correct */
-.team-member  h4 {
-    color: var(--text-color) !important; /* Force white */
-}
-/*No need to change if .text-muted is already correctly styled by Bootstrap */
-
-.team-member p {
-    color: var(--text-color) !important; /* Force White for regular paragraphs */
-}
-
-
-
-/* Contact Us Section */
-#contact-us h2 {
-    color: var(--primary-color);
-}
-
-/* Contact & Location Section */
-#contact h2 {
-    color: var(--primary-color);
-}
-
-
-/*Hero Section Content*/
-.hero-content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-}
-
-.hero-text {
-    text-align: left;
-    width: 55%;
-    padding-right: 20px;
-}
-
-.hero-image {
-    width: 45%;
-    text-align: right;
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-}
-
-.hero-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    border-radius: 15px;
-    position: relative;
-}
-
-.hero-image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%),
-        linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%),
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%),
-        linear-gradient(to left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%);
-    border-radius: 15px;
+#team p {
+  color: var(--text-color) !important;
 }
 
 /* Center the Hero Section Title and Subtitle */
-.hero-section .container h1,
 .hero-section .container p {
-    text-align: center;
+  text-align: center;
 }
 
-/*Fade effect*/
+/* Fade effect */
 .fade-in-on-scroll {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-in-out;
 }
 
 .fade-in-on-scroll.active {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* About Section Fade-in */
-#about p,
-#about blockquote {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s ease-in-out;
-}
-
-#about p.active,
-#about blockquote.active {
-    opacity: 1;
-    transform: translateY(0);
+/* About Section Fade-in and text size changes */
+.about-paragraph {
+  font-size: 1.3rem;
 }
 
 /* Meet The Team Fade-In */
 .team-member {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-in-out;
 }
 
 .team-member.active {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Back to Top Button Styles */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color: 0.3s ease;
+}
+
+#back-to-top:hover {
+  background-color: #e0a800;
+}
+
+/* Ensure images are responsive */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* About section specific styles */
+#about .about-image {
+  border-radius: 15px;
+  /* Optional: Add rounded corners to the image */
+  margin-bottom: 20px;
+  /* Add some space below the image on mobile */
+}
+
+/* Style for the "Talk to Us" paragraph */
+.talk-to-us-text {
+  font-size: 1.2rem;
+  /* Increased font size */
+  color: var(--text-color);
+}
+
+.map-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  /* Rounded corners for the container */
+}
+
+.map-container iframe {
+  border-radius: 15px;
+  /* Match the container's border-radius */
+  display: block;
+  width: 100%;
+  height: 450px;
+  transition: transform 0.2s ease-in-out;
+  /*  For hover */
+}
+
+/* add Contact & Location style */
+#contact h4 {
+  color: var(--primary-color);
+}
+
+.map-container:hover iframe {
+  box-shadow: 0 0 15px 5px var(--primary-color);
+  /* Orange glow on hover */
+}
+
+.social-links a {
+  margin-right: 10px;
+  /* Add some spacing between social icons */
+}
+
+/* Hover style for social links */
+.social-links .social-link:hover {
+  background-color: var(--primary-color);
+  /* Use the primary color (orange) */
+  color: var(--secondary-color) !important;
+  /* Set text color to secondary (black) on hover*/
+  /* Ensure the hover effect applies */
+}
+/* Style for the download buttons */
+#old-menu-images .btn-primary {
+    background-color: var(--primary-color); /* Orange background */
+    color: var(--secondary-color);        /* Black text */
+    border-color: var(--primary-color);    /* Orange border */
+}
+
+#old-menu-images .btn-primary:hover {
+    background-color: var(--secondary-color); /* Black background on hover */
+    color: var(--primary-color) !important;        /* Orange text on hover */
+    border-color: var(--primary-color);    /* Orange border on hover*/
 }
