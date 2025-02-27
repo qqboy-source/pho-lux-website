@@ -1,12 +1,9 @@
 :root {
     --heading-font: 'Playfair Display', serif;
     --body-font: 'Lato', sans-serif;
-    --primary-color: #e67e22;
-    /* Orange color */
-    --secondary-color: #000;
-    /* Black */
-    --text-color: #fff;
-    /* White */
+    --primary-color: #e67e22;  /* Orange color */
+    --secondary-color: #000; /* Black */
+    --text-color: #fff;       /* White */
 }
 
 body {
@@ -14,10 +11,8 @@ body {
     color: var(--text-color);
     font-family: var(--body-font);
     line-height: 1.6;
-    padding-top: 70px;
-    /* Adjust to account for fixed navbar */
-    position: relative;
-    /* Needed for the back-to-top button positioning */
+    padding-top: 70px; /* Adjust to account for fixed navbar */
+    position: relative; /* Needed for the back-to-top button positioning */
 }
 
 /* Navbar Styles */
@@ -41,27 +36,34 @@ body {
     color: var(--primary-color) !important;
 }
 
-/* --- Hero Section Styles --- */
+/* --- Hero Section Styles (Text Only) --- */
 .hero-section {
-  background-color: var(--secondary-color);
-  background-image: url('pho-bowl.png'); /* Set the background image */
-  background-size: cover; /* Cover the entire section */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  height: 70vh;  /*  Set a height for the section  */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Align content to the top */
-  align-items: center; /* Horizontally center content */
-  text-align: center; /* Center text */
-  position: relative; /*  For the overlay positioning */
-  padding-top: 150px; /*  Space for the heading, was 100px */
-}
-/* Remove full width container style */
-.full-width-image-container{
-    display: none;
+  background-color: var(--secondary-color); /* Keep background black */
+  padding-top: 100px; /* Space for fixed navbar */
+  text-align: center; /* Center the text */
+  /* Remove background image properties, height, flex, etc. */
 }
 
+/* Hero Image Section Styles */
+#hero-image {
+    background-color: var(--secondary-color); /* Consistent background */
+    padding: 20px 0; /* Add some padding around the image */
+}
+
+/* --- Modified h1 styling for hero section --- */
+.hero-heading {
+    font-family: var(--heading-font);
+    font-size: 7rem;
+    color: var(--primary-color); /* Use the orange color */
+    text-align: center;
+    letter-spacing: 0.2em;
+    transition: transform 0.2s ease-in-out;
+}
+
+.hero-heading:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
 /* Removed all smoke-related CSS */
 
 /* Best Sellers Section */
@@ -216,30 +218,12 @@ body {
   color: var(--text-color) !important;
 }
 
-/* Hero Section Content */
-/* Removed hero-content-wrapper, hero-text, hero-image styles */
 
 /* Center the Hero Section Title and Subtitle */
 /* .hero-section .container h1,  Removed this line */
 .hero-section .container p {
   text-align: center;
 }
-
-/* --- Modified h1 styling for hero section --- */
-.hero-heading {
-  font-family: var(--heading-font);
-  font-size: 7rem;
-  color: var(--primary-color);
-  text-align: center;
-  letter-spacing: 0.2em;
-  transition: transform 0.2s ease-in-out;  /*  Keep the transition */
-}
-
-.hero-heading:hover {
-  transform: scale(1.1);  /* Keep the hover effect */
-  cursor: pointer;
-}
-
 
 /* Fade effect */
 .fade-in-on-scroll {
