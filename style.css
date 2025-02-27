@@ -1,39 +1,44 @@
 :root {
-  --heading-font: 'Playfair Display', serif;
-  --body-font: 'Lato', sans-serif;
-  --primary-color: #e67e22;  /* Orange color */
-  --secondary-color: #000; /* Black */
-  --text-color: #fff;       /* White */
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Lato', sans-serif;
+    --primary-color: #e67e22;
+    /* Orange color */
+    --secondary-color: #000;
+    /* Black */
+    --text-color: #fff;
+    /* White */
 }
 
 body {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  font-family: var(--body-font);
-  line-height: 1.6;
-  padding-top: 70px; /* Adjust to account for fixed navbar */
-  position: relative; /* Needed for the back-to-top button positioning */
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    line-height: 1.6;
+    padding-top: 70px;
+    /* Adjust to account for fixed navbar */
+    position: relative;
+    /* Needed for the back-to-top button positioning */
 }
 
 /* Navbar Styles */
 .navbar {
-  background-color: var(--secondary-color) !important;
-  width: 100%;
-  z-index: 1000;
-  border-bottom: 3px solid var(--primary-color);
+    background-color: var(--secondary-color) !important;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .navbar-brand {
-  color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
 }
 
 .nav-link {
-  color: var(--text-color) !important;
-  transition: color 0.3s ease;
+    color: var(--text-color) !important;
+    transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
 }
 
 /* --- Hero Section Styles --- */
@@ -61,47 +66,47 @@ body {
 
 /* Best Sellers Section */
 #best-sellers {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 #best-sellers h2 {
-  color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .best-seller-item {
-  background-color: rgba(0, 0, 0, 0.7);
-  border: 3px solid var(--primary-color);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  color: var(--text-color);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Add transition */
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 3px solid var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: var(--text-color);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Add transition */
 }
 
 .best-seller-item:hover {
-  transform: scale(1.05); /* Scale up slightly on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Increase box-shadow on hover */
-  cursor: pointer;
+    transform: scale(1.05); /* Scale up slightly on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Increase box-shadow on hover */
+    cursor: pointer;
 }
 
 .best-seller-item h4 {
-  color: var(--primary-color);
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-  font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .best-seller-item .description {
-  font-style: normal;
-  color: #ccc;
-  margin-bottom: 15px;
+    font-style: normal;
+    color: #ccc;
+    margin-bottom: 15px;
 }
 
 .best-seller-item .price {
-  font-size: 1.2rem;
-  color: var(--primary-color);
+    font-size: 1.2rem;
+    color: var(--primary-color);
 }
 
 .blockquote {
@@ -113,16 +118,16 @@ body {
 
 /* Meet the Team Section */
 .team-member {
-  margin-bottom: 30px;
-  text-align: center;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .team-member img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
 .team-description{
@@ -130,8 +135,8 @@ body {
 }
 /* Changed team member name color */
 .team-name {
-  color: var(--primary-color);
-  font-size: 1.3rem; /* Make team names same size as descriptions */
+    color: var(--primary-color);
+    font-size: 1.3rem; /* Make team names same size as descriptions */
 }
 
 .team-title {
@@ -141,30 +146,30 @@ body {
 
 /* Contact Us Section */
 .contact-form {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 .contact-form .form-control {
-  background-color: #333;
-  color: var(--text-color) !important; /* Make sure the color is applied */
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 15px;
+    background-color: #333;
+    color: var(--text-color) !important; /* Make sure the color is applied */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
 }
 
 .contact-form .form-control::placeholder {
-  color: white;
-  opacity: 0.8;
+    color: white;
+    opacity: 0.8;
 }
 
 .contact-form .btn-primary {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 /* Media query for smaller screens */
@@ -189,32 +194,21 @@ body {
 }
 
 .navbar-brand img {
-  height: 75px;
-  width: 150px
+    height: 75px;
+    width: 150px
 }
 
 /* Hero Section - Explicitly set colors */
-.hero-section .container h1,  /*Changed container to class*/
-/* Less specific, more reliable */
-.hero-section .container .lead,
-.hero-text p {
-  color: var(--primary-color) !important;
-}
-
-
-/* Combined Selectors for consistent heading colors */
-#about .container h2,
-#team .container h2,
-#contact-us h2,
-#contact h2,
-#best-sellers h2 {
-  color: var(--primary-color) !important;
-}
-
 /*Correct about text color*/
-#about .container p,
-#about .container blockquote {
-  color: var(--text-color) !important;
+#about p,
+#about blockquote {
+    color: var(--text-color) !important;
+}
+
+/*Set color for team section*/
+#team h4,
+#team p {
+    color: var(--text-color) !important;
 }
 
 /* .team-member h4,  Removed this - we're using .team-name now */
@@ -238,14 +232,14 @@ body {
   color: var(--primary-color);
   text-align: center;
   letter-spacing: 0.2em;
-  transition: transform 0.2s ease-in-out; /* Add the transition */
+  transition: transform 0.2s ease-in-out;  /*  Keep the transition */
 }
 
-/* Add the hover effect */
 .hero-heading:hover {
-  transform: scale(1.1); /*  Scale up by 10% on hover */
+  transform: scale(1.1);  /* Keep the hover effect */
   cursor: pointer;
 }
+
 
 /* Fade effect */
 .fade-in-on-scroll {
@@ -291,7 +285,7 @@ body {
   cursor: pointer;
   z-index: 1001;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease;
+  transition: background-color: 0.3s ease;
 }
 
 #back-to-top:hover {
@@ -329,9 +323,9 @@ body {
 .social-links a {
     margin-right: 10px; /* Add some spacing between social icons */
 }
-
+/* Hover style for social links */
 .social-links .social-link:hover {
-    background-color: var(--primary-color); /* Orange background on hover */
-    color: var(--secondary-color) !important; /*  Change text color to black on hover */
+    background-color: var(--primary-color); /* Use the primary color (orange) */
+    color: var(--secondary-color) !important; /* Set text color to secondary (black) on hover*/
      /* Ensure the hover effect applies */
 }
