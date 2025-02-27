@@ -43,46 +43,45 @@
     </nav>
 
     <main>
-       <!-- Hero Section (Home) -->
-<section id="home" class="hero-section">
-    <div class="container position-relative" style="z-index: 1; padding-top: 100px; text-align: center;">
-        <h1 style="font-family: var(--heading-font); font-size: 7rem; color: var(--primary-color); letter-spacing: 0.2em; transition: transform 0.2s ease-in-out;">
-            PHO LUX
-        </h1>
-        <p class="lead mt-3" style="font-size: 1.75rem; color: var(--primary-color);">Made In Houston</p>
+        <!-- Hero Section (Home) -->
+        <section id="home" class="hero-section">
+            <div class="container position-relative" style="z-index: 1; padding-top: 100px; text-align: center;">
+                <h1 class="hero-heading">
+                    PHO LUX
+                </h1>
+                <p class="lead mt-3" style="font-size: 1.75rem; color: var(--primary-color);">Made In Houston</p>
 
-        <!-- Full-width Image Container -->
-        <div class="full-width-image-container">
-            <img src="pho-bowl.png" alt="Bowl of Pho Noodle Soup" class="img-fluid" loading="lazy">
-             <div class="hero-image-overlay"></div>
-        </div>
-    </div>
-</section>
+                <!-- Full-width Image Container -->
+                <div class="full-width-image-container">
+                    <img src="pho-bowl.png" alt="Bowl of Pho Noodle Soup" class="img-fluid" loading="lazy">
+                    <div class="hero-image-overlay"></div>
+                </div>
+            </div>
+        </section>
 
         <!-- About Section -->
         <section id="about" class="py-5 about-section">
-            <!-- Removed smoke divs from here -->
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="Award.png" alt="Restaurant Interior" class="img-fluid about-image">
+                        <img src="Award.png" alt="Restaurant Interior" class="img-fluid about-image" id="about-image">  <!-- Added ID for JS targeting -->
                     </div>
                     <div class="col-md-6">
                         <h2 class="text-center mb-5">Our Story</h2>
-                        <p class="fade-in-on-scroll" style="font-size: 2rem;">In 2013, the current chef and owner of Phở
+                        <p class="about-paragraph-large fade-in-on-scroll">In 2013, the current chef and owner of Phở
                             Lux introduced Phở Hùng,
                             which was recognized by renowned food critic Alison Cook as one of Houston’s most
                             esteemed establishments, earning it a place in both of Cook’s Top 100 restaurants in 2014
                             and 2015.</p>
 
-                        <blockquote class="blockquote fade-in-on-scroll" style="font-size: 2rem">
+                        <blockquote class="blockquote about-paragraph-small fade-in-on-scroll">  <!-- Added class for smaller text -->
                             "The moment the steaming bowl of soup lands on my table at Phở Hùng, the rest of the
                             universe falls away from me. There's only the scent of
                             scallion and beef broth; the delicate taste of cinnamon on my tongue; the slip and slide
                             of long springy noodles."
                         </blockquote>
 
-                        <p class="fade-in-on-scroll" style="font-size: 2rem;">In 2024, the concept of Phở Lux was conceived
+                        <p class="about-paragraph-small fade-in-on-scroll">In 2024, the concept of Phở Lux was conceived
                             to commemorate the
                             chef’s and owner’s pride in being a Houstonian, while simultaneously preserving
                             traditional Vietnamese cuisine and honoring her passion for car enthusiasts.</p>
@@ -160,8 +159,8 @@
                     <div class="col-md-4 team-member fade-in-on-scroll">
                         <img src="Picture-one.png" alt="Christy Le" class="img-fluid" loading="lazy">
                         <h4 class="team-name">Christy Le</h4> <!-- Added class for styling -->
-                        <p class="text-muted">Chef and Owner</p>
-                        <p style="font-size: 1.5rem;">Self-made entrepreneur with a multimillion-dollar spa sector in
+                        <p class="text-muted team-title">Chef and Owner</p> <!-- Added class for team titles -->
+                        <p class = "team-description">Self-made entrepreneur with a multimillion-dollar spa sector in
                             Aliana, Texas. Additionally,
                             the owner is a renowned chef who received a culinary critic award for their recipe, which
                             was unveiled by Alison Cook. The chef’s restaurant was ranked number one in Houston’s top
@@ -170,8 +169,8 @@
                     <div class="col-md-4 team-member fade-in-on-scroll">
                         <img src="Picture-two.png" alt="Pearl Tang" class="img-fluid" loading="lazy">
                         <h4 class="team-name">Pearl Tang</h4> <!-- Added class for styling -->
-                        <p class="text-muted">Operations Executive</p>
-                        <p style="font-size: 1.5rem;">A highly accomplished executive with over 15 years of experience
+                        <p class="text-muted team-title">Operations Executive</p> <!-- Added class for team titles -->
+                        <p class = "team-description">A highly accomplished executive with over 15 years of experience
                             providing strategic
                             consulting and leadership within the international F&B, luxury fashion, and
                             beauty/cosmetic spa industries. She has successfully led enterprise value creation
@@ -183,15 +182,14 @@
         </section>
 
         <!-- Contact Us Section (Form) -->
-        <!-- Contact Us Section (Form) -->
         <section id="contact-us" class="py-5">
             <div class="container">
                 <h2 class="text-center mb-5">Talk to Us</h2>
-                <p class="text-center">Whether you're inquiring about reservations, catering services, private event
+                <p class="text-center talk-to-us-text">Whether you're inquiring about reservations, catering services, private event
                     hosting, menu details, or anything else—our team is here to help. We specialize in creating
                     unforgettable experiences, including full setup, catering, and hosting for events with 30+
                     attendees. Let us bring your vision to life!<br><br>
-                    Reach out today—we’d love to discuss your needs.</p> <!-- Updated Text -->
+                    Reach out today—we’d love to discuss your needs.</p> <!-- Updated Text and class -->
                 <div class="row justify-content-center">
                     <div class="col-md-6">
                         <form class="contact-form" action="https://formspree.io/f/YOUR_ACTUAL_FORM_ID" method="POST">
@@ -226,12 +224,12 @@
                 <h2 class="text-center mb-5">Contact & Location</h2>
                 <div class="row g-4">
                     <div class="col-md-6">
-                        <div class="map-container">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.10042211848!2d-95.5842894767925!3d29.746391226543376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c3dd4d89253d%3A0x5f26e4cfd757a99a!2s11107%201%2F2%20Bellaire%20Blvd%2C%20Houston%2C%20TX%2077072%2C%20USA!5e0!3m2!1sen!2sbd!4v1717946332936!5m2!1sen!2sbd"
-                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                    </div>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.10042211848!2d-95.5842894767925!3d29.746391226543376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c3dd4d89253d%3A0x5f26e4cfd757a99a!2s11107%201%2F2%20Bellaire%20Blvd%2C%20Houston%2C%20TX%2077072%2C%20USA!5e0!3m2!1sen!2sbd!4v1717946332936!5m2!1sen!2sbd"
+              width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          </div>
 
                     <div class="col-md-6">
                         <div class="contact-info">
@@ -244,7 +242,7 @@
 
                             <h4 class="mt-4"><i class="bi bi-geo-alt me-2"></i>Address</h4>
                             <address>
-                                11107 1/2, Bellaire Blvd,<br>
+                                11107 1/2, Bellaire Blvd,<br>  <!-- Updated Address -->
                                 Houston, TX 77072,<br>
                                 United States<br>
                                 (Located in the Vietnam Shopping Center) <!-- Updated address and parenthetical -->
@@ -252,9 +250,9 @@
 
                             <h4 class="mt-4"><i class="bi bi-envelope me-2"></i>Contact</h4>
                             <p>
-                               Cellphone: <a href="tel:3464408991" style="color: var(--text-color)">(346) 440-8991</a><br>
+                               Cellphone: <a href="tel:3464408991" style="color: var(--text-color)">(346) 440-8991</a><br>  <!-- Added "Cellphone: " -->
                                 Email : <a href="mailto:phoLux8@gmail.com"
-                                    style="color: var(--text-color)">phoLux8@gmail.com</a><br>
+                                    style="color: var(--text-color)">phoLux8@gmail.com</a><br> <!-- Added "Email: " -->
                             </p>
 
                             <h4 class="mt-4">Follow Us</h4>
