@@ -42,20 +42,18 @@ body {
   padding-top: 100px;  /* Space for fixed navbar*/
   text-align: center; /* Center the text */
 }
-/*  style for hero image section */
+/* Hero Image Section Styles */
 #hero-image {
-    background-color: var(--secondary-color);  /* Consistent background */
-    padding: 20px 0;                         /* Padding around the image */
-    text-align: center;                       /* Center the image horizontally */
+    background-color: var(--secondary-color); /* Consistent background */
+    padding: 20px 0; /* Add some padding around the image */
+    text-align: center; /* Center the image horizontally within its container */
 }
-
-#hero-image img {
-    max-width: 100%;    /*  Make sure the image doesn't overflow */
-    height: auto;       /*  Maintain aspect ratio */
-    display: block;      /*  Remove any extra space below inline elements */
-    margin: 0 auto;     /*  Center the image horizontally */
+ #hero-image img {
+        max-width: 100%;  /*  Ensure the image doesn't overflow */
+        height: auto;      /*  Maintain aspect ratio */
+        display: block;    /* Remove extra space below inline elements */
+        margin: 0 auto;    /*  Center horizontally */
 }
-
 /* --- Modified h1 styling for hero section --- */
 .hero-heading {
   font-family: var(--heading-font);
@@ -220,6 +218,7 @@ body {
 #best-sellers h2 {      /* Best Sellers heading */
     color: var(--primary-color) !important;
 }
+
 /*Correct about text color*/
 #about p,
 #about blockquote {
@@ -236,14 +235,8 @@ body {
 .team-member p {
   color: var(--text-color) !important;
 }
-/*Style for the "Talk to Us" paragraph */
-.talk-to-us-text {
-    font-size: 1.2rem; /* Increased font size */
-     color: var(--text-color)
-}
 
 /* Center the Hero Section Title and Subtitle */
-/* .hero-section .container h1,  Removed this line */
 .hero-section .container p {
   text-align: center;
 }
@@ -310,7 +303,11 @@ body {
   border-radius: 15px; /* Optional: Add rounded corners to the image */
   margin-bottom: 20px; /* Add some space below the image on mobile */
 }
-
+/* Style for the "Talk to Us" paragraph */
+.talk-to-us-text {
+    font-size: 1.2rem; /* Increased font size */
+    color: var(--text-color);
+}
 .map-container {
   position: relative;
   overflow: hidden;
@@ -324,11 +321,10 @@ body {
     height: 450px;
     transition: transform 0.2s ease-in-out; /*  For hover */
 }
-/* change contact us style */
+/* add Contact & Location style */
 #contact h4 {
     color: var(--primary-color);
 }
-
 .map-container:hover iframe {
     box-shadow: 0 0 15px 5px var(--primary-color); /* Orange glow on hover */
 }
