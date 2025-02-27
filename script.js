@@ -39,5 +39,3 @@ backToTopButton.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
-
-// Removed image height adjustment
