@@ -48,12 +48,14 @@ body {
     padding: 20px 0; /* Add some padding around the image */
     text-align: center; /* Center the image horizontally within its container */
 }
+
  #hero-image img {
-        max-width: 100%;  /*  Ensure the image doesn't overflow */
-        height: auto;      /*  Maintain aspect ratio */
+        max-width: 100%;  /*  Make sure image doesn't overflow */
+        height: auto;      /*  Preserve aspect ratio */
         display: block;    /* Remove extra space below inline elements */
         margin: 0 auto;    /*  Center horizontally */
-}
+     }
+
 /* --- Modified h1 styling for hero section --- */
 .hero-heading {
   font-family: var(--heading-font);
@@ -227,12 +229,10 @@ body {
 
 /*Set color for team section*/
 #team h4,
-#team p {
-    color: var(--text-color) !important;
+#team .team-title {  /*  Corrected selector here! */
+    color: var(--primary-color) !important;
 }
-
-/* .team-member h4,  Removed this - we're using .team-name now */
-.team-member p {
+#team p{
   color: var(--text-color) !important;
 }
 
@@ -306,7 +306,7 @@ body {
 /* Style for the "Talk to Us" paragraph */
 .talk-to-us-text {
     font-size: 1.2rem; /* Increased font size */
-    color: var(--text-color);
+    color: var(--text-color)
 }
 .map-container {
   position: relative;
