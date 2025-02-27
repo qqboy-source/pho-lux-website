@@ -7,7 +7,8 @@
     /* Black */
     --text-color: #fff;
     /* White */
-    --card-color: rgb(25, 25, 25); /*For gradient effect*/
+    --card-color: rgb(25, 25, 25);
+    /*For gradient effect*/
 }
 
 body {
@@ -44,54 +45,24 @@ body {
 
 /* Hero Section Styles */
 .hero-section {
-    background-color: var(--secondary-color);
-    /*  Background color instead of image */
-    background-image: none;
-    /* Remove background image */
-    min-height: auto;
-    /* Remove minimum height constraint */
-    padding-bottom: 20px;
-    /* Add some padding at the bottom */
-    text-align: center;
-    /* Center-align content */
+  background-color: var(--secondary-color);
+  background-image: url('pho-bowl.png'); /* Set the background image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  height: 70vh;  /*  Set a height for the section (adjust as needed) */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+  text-align: center; /* Center text */
+  position: relative; /*  For the overlay positioning */
+}
+/* Remove full width container style */
+.full-width-image-container{
+    display: none;
 }
 
-.full-width-image-container {
-    width: 100%;
-    /* Full width */
-    overflow: hidden;
-    /* Prevent horizontal scrolling */
-}
-
-.full-width-image-container img {
-    width: 100%;
-    /* Make image fill the container */
-    height: auto;
-    /* Maintain aspect ratio */
-    display: block;
-    /* Remove any extra space below the image */
-}
-
-.hero-image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%),
-        linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%),
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%),
-        linear-gradient(to left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%);
-    border-radius: 0px;
-}
-
- /* Remove hero image styles, keep overlay. Set border radius 0 in media*/
-.hero-image {
-    border-radius: 0;
-}
-.hero-image img {
-    border-radius: 0;
-}
 /* Removed all smoke-related CSS */
 
 /* Best Sellers Section */
@@ -112,12 +83,15 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     text-align: center;
     color: var(--text-color);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Add transition */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    /* Add transition */
 }
 
 .best-seller-item:hover {
-    transform: scale(1.05); /* Scale up slightly on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Increase box-shadow on hover */
+    transform: scale(1.05);
+    /* Scale up slightly on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* Increase box-shadow on hover */
     cursor: pointer;
 }
 
@@ -160,16 +134,22 @@ body {
     object-fit: cover;
     margin-bottom: 15px;
 }
-.team-description{
+
+.team-description {
     font-size: 1.3rem;
 }
+
 /* Changed team member name color */
 .team-name {
     color: var(--primary-color);
-    font-size: 1.3rem; /* Make team names same size as descriptions */
+    font-size: 1.3rem;
+    /* Make team names same size as descriptions */
 }
+
 .team-title {
-    font-size: 1.3rem; /* Equalize team title font size */
+    font-size: 1.3rem;
+    /* Equalize team title font size */
+    color: var(--primary-color);  /*  Set team title color */
 }
 
 /* Contact Us Section */
@@ -203,43 +183,24 @@ body {
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-    /* Removed smoke styles */
-
-    /* Adjust hero text and image for smaller screens */
-    .hero-content-wrapper {
-        flex-direction: column;
-        /* Stack text and image vertically */
+.hero-section {
+        height: auto; /* Let the content determine height on smaller screens */
+        padding-bottom: 20px; /* Ensure some padding at the bottom */
     }
 
-    .hero-text,
-     .hero-image {
-        width: 100%;
-        /* Full width */
-        text-align: center;
-        /* Center text */
-        padding-right: 0;
-        /* Remove padding */
+  /* About section on smaller screens */
+  #about .row {
+    flex-direction: column; /* Stack image and text vertically */
+  }
+
+  #about .col-md-6 {
+    width: 100%; /* Full width for both columns */
+}
+/* make the map smaller */
+   .map-container iframe {
+        height: 300px;  /* Adjust height for smaller screens */
     }
 
-    .hero-image {
-        margin-top: 20px;
-        /* Add space above image */
-    }
-
-    /* About section on smaller screens */
-    #about .row {
-        flex-direction: column;
-        /* Stack image and text vertically */
-    }
-
-    #about .col-md-6 {
-        width: 100%;
-        /* Full width for both columns */
-    }
-
-    .hero-image-overlay{
-        border-radius: 0;
-    }
 }
 
 .navbar-brand img {
@@ -286,18 +247,18 @@ body {
 }
 
 /* Modified h1 styling for hero section */
-.hero-heading {  /* Use a class for the hero heading */
+/* Use a class for the hero heading */
+.hero-heading {
     font-family: var(--heading-font);
     font-size: 7rem;
     color: var(--primary-color);
     text-align: center;
     letter-spacing: 0.2em;
-    transition: transform 0.2s ease-in-out; /* Add transition for smooth animation */
+    transition: transform 0.2s ease-in-out;  /*  Keep the transition */
 }
 
-
-.hero-heading:hover {  /* Apply hover effect to the class */
-    transform: scale(1.1);
+.hero-heading:hover {
+    transform: scale(1.1);  /* Keep the hover effect */
     cursor: pointer;
 }
 
@@ -315,13 +276,11 @@ body {
 }
 
 /* About Section Fade-in and text size changes */
-.about-paragraph-large {
-    font-size: 1.4rem; /* Slightly smaller than 2x for the main paragraph */
+/*Use a single class for about paragraph*/
+.about-paragraph {
+    font-size: 1.3rem;
 }
 
-.about-paragraph-small {
-    font-size: 1.1rem;  /*  Smaller for the quote and final paragraph */
-}
 /* Meet The Team Fade-In */
 .team-member {
     opacity: 0;
@@ -349,7 +308,7 @@ body {
     cursor: pointer;
     z-index: 1001;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: background-color: 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 #back-to-top:hover {
@@ -374,8 +333,11 @@ body {
 .talk-to-us-text {
     font-size: 1.2rem; /* Increased font size */
 }
+
 .map-container {
-    position: relative; /* Make the container a positioning context */
+    position: relative;  /* Make the container a positioning context */
+    border-radius: 15px; /* Add border-radius here to match the iframe */
+    overflow: hidden;    /* Hide any overflowing content (important for the border) */
 }
 .map-container::before {
     content: "";
@@ -391,11 +353,31 @@ body {
     45deg,
     transparent 5%,
     var(--primary-color) 50%,
-    transparent 99%
+    transparent 95%  /*  Changed to 95% for a thinner border effect */
   );
   opacity: 0;
   transition: opacity 400ms;
+    z-index: 2; /* Ensure its above*/
+
 }
-.map-container:hover::before{
+/* Show the border on hover */
+.map-container:hover::before {
     opacity: 1;
+}
+
+/*Style the iframe to match the container*/
+.map-container iframe {
+    border-radius: 15px;  /* Add border-radius to the iframe */
+    display: block;      /*  Remove any extra spacing around the iframe */
+    width: 100%;         /*  Make sure it fills the container */
+    height: 450px;      /*  Keep your desired height */
+}
+.social-links a {
+    margin-right: 10px; /* Add some spacing between social icons */
+}
+
+.social-links .social-link:hover {
+    background-color: var(--primary-color); /* Orange background on hover */
+    color: var(--secondary-color) !important; /*  Change text color to black on hover */
+    /* Ensure the hover effect applies */
 }
