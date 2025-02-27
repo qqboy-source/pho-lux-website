@@ -39,7 +39,7 @@ body {
 /* --- Hero Section Styles (Text Only) --- */
 .hero-section {
   background-color: var(--secondary-color); /* Keep background black */
-  padding-top: 100px;  /* Space for fixed navbar.  Reduced from 100px */
+  padding-top: 80px;  /* Space for fixed navbar.  Reduced from 100px */
   text-align: center; /* Center the text */
 }
 /* Hero Image Section Styles */
@@ -339,16 +339,12 @@ body {
     color: var(--secondary-color) !important; /* Set text color to secondary (black) on hover*/
      /* Ensure the hover effect applies */
 }
-/* Style for the download buttons, change to orange */
-#old-menu-images .btn-primary {
+/* Style for the download buttons */
+#old-menu-images .btn-download {
     background-color: var(--primary-color); /* Orange background */
-    color: var(--secondary-color);        /* Black text */
-    border-color: var(--primary-color);    /* Orange border */
-}
-
-#old-menu-images .btn-primary:hover {
-     /* Darker orange on hover */
     border-color:     var(--primary-color);    /* Orange border on hover */
-    color: var(--secondary-color) !important;
+    color: var(--secondary-color);          /* Black text  */
+}
+#old-menu-images .btn-download:hover {
     background-color: #b96218;
 }
