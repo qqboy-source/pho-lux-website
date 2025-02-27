@@ -45,4 +45,10 @@ function adjustAboutImageHeight() {
     const aboutImage = document.getElementById('about-image');
     const aboutText = document.querySelector('#about .col-md-6:last-child'); // Select the text container
     if (aboutImage && aboutText) {
-        aboutImage.style.height = `${about
+        aboutImage.style.height = `${aboutText.offsetHeight}px`;
+    }
+}
+
+// Call the function on page load and window resize
+window.addEventListener('load', adjustAboutImageHeight);
+window.addEventListener('resize', adjustAboutImageHeight);
