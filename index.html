@@ -43,49 +43,33 @@
     </nav>
 
     <main>
-        <!-- Hero Section (Home) -->
-        <section id="home" class="hero-section">
-            <div class="container position-relative" style="z-index: 1; padding-top: 100px; text-align: center;">
-                <h1 class="hero-heading">
-                    PHO LUX
-                </h1>
-                <p class="lead mt-3" style="font-size: 1.75rem; color: var(--primary-color);">Made In Houston</p>
+    <!-- Hero Section (Home) -->
+    <section id="home" class="hero-section">
+        <div class="container position-relative" style="z-index: 1; padding-top: 100px; text-align: center;">
+            <h1 class="hero-heading">
+                PHO LUX
+            </h1>
+            <p class="lead mt-3" style="font-size: 1.75rem; color: var(--primary-color);">Made In Houston</p>
+            <!-- Image is now a background image, set in CSS -->
+        </div>
+    </section>
 
-                <!-- Full-width Image Container -->
-                <div class="full-width-image-container">
-                    <img src="pho-bowl.png" alt="Bowl of Pho Noodle Soup" class="img-fluid" loading="lazy">
-                    <div class="hero-image-overlay"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-5 about-section">
+    <!-- About Section -->
+     <section id="about" class="py-5 about-section pt-5"> <!-- Added extra padding-top -->
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="Award.png" alt="Restaurant Interior" class="img-fluid about-image" id="about-image">  <!-- Added ID for JS targeting -->
+                      <img src="Award.png" alt="Restaurant Interior" class="img-fluid about-image" id="about-image">
                     </div>
                     <div class="col-md-6">
                         <h2 class="text-center mb-5">Our Story</h2>
-                        <p class="about-paragraph-large fade-in-on-scroll">In 2013, the current chef and owner of Phở
-                            Lux introduced Phở Hùng,
-                            which was recognized by renowned food critic Alison Cook as one of Houston’s most
-                            esteemed establishments, earning it a place in both of Cook’s Top 100 restaurants in 2014
-                            and 2015.</p>
+                       <p class="about-paragraph fade-in-on-scroll">In 2013, the current chef and owner of Phở Lux introduced Phở Hùng, which was recognized by renowned food critic Alison Cook as one of Houston’s most esteemed establishments, earning it a place in both of Cook’s Top 100 restaurants in 2014 and 2015.</p>
 
-                        <blockquote class="blockquote about-paragraph-small fade-in-on-scroll">  <!-- Added class for smaller text -->
-                            "The moment the steaming bowl of soup lands on my table at Phở Hùng, the rest of the
-                            universe falls away from me. There's only the scent of
-                            scallion and beef broth; the delicate taste of cinnamon on my tongue; the slip and slide
-                            of long springy noodles."
-                        </blockquote>
+                    <blockquote class="blockquote about-paragraph fade-in-on-scroll">
+                        "The moment the steaming bowl of soup lands on my table at Phở Hùng, the rest of the universe falls away from me. There's only the scent of scallion and beef broth; the delicate taste of cinnamon on my tongue; the slip and slide of long springy noodles."
+                    </blockquote>
 
-                        <p class="about-paragraph-small fade-in-on-scroll">In 2024, the concept of Phở Lux was conceived
-                            to commemorate the
-                            chef’s and owner’s pride in being a Houstonian, while simultaneously preserving
-                            traditional Vietnamese cuisine and honoring her passion for car enthusiasts.</p>
-                        <!-- Updated text -->
+                    <p class="about-paragraph fade-in-on-scroll">In 2024, the concept of Phở Lux was conceived to commemorate the chef’s and owner’s pride in being a Houstonian, while simultaneously preserving traditional Vietnamese cuisine and honoring her passion for car enthusiasts.</p>
                     </div>
 
                 </div>
@@ -182,6 +166,7 @@
         </section>
 
         <!-- Contact Us Section (Form) -->
+        <!-- Contact Us Section (Form) -->
         <section id="contact-us" class="py-5">
             <div class="container">
                 <h2 class="text-center mb-5">Talk to Us</h2>
@@ -223,13 +208,11 @@
             <div class="container">
                 <h2 class="text-center mb-5">Contact & Location</h2>
                 <div class="row g-4">
-                    <div class="col-md-6">
-          <div class="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.10042211848!2d-95.5842894767925!3d29.746391226543376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c3dd4d89253d%3A0x5f26e4cfd757a99a!2s11107%201%2F2%20Bellaire%20Blvd%2C%20Houston%2C%20TX%2077072%2C%20USA!5e0!3m2!1sen!2sbd!4v1717946332936!5m2!1sen!2sbd"
-              width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          </div>
-          </div>
+                   <div class="col-md-6">
+                    <div class="map-container">
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.10042211848!2d-95.5842894767925!3d29.746391226543376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c3dd4d89253d%3A0x5f26e4cfd757a99a!2s11107%201%2F2%20Bellaire%20Blvd%2C%20Houston%2C%20TX%2077072%2C%20USA!5e0!3m2!1sen!2sbd!4v1717946332936!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                   </div>
 
                     <div class="col-md-6">
                         <div class="contact-info">
@@ -257,23 +240,23 @@
 
                             <h4 class="mt-4">Follow Us</h4>
                             <div class="social-links">
-                                <a href="https://facebook.com/pholux.2024" target="_blank" class="btn btn-outline-light"
-                                    style="color: var(--text-color)" rel="noopener noreferrer"
+                                <a href="https://facebook.com/pholux.2024" target="_blank" class="btn btn-outline-light social-link"
+                                     rel="noopener noreferrer"
                                     aria-label="Visit our Facebook page">
                                     <i class="bi bi-facebook"></i> Facebook
                                 </a>
-                                <a href="https://instagram.com/phol.ux" target="_blank" class="btn btn-outline-light"
-                                    style="color: var(--text-color)" rel="noopener noreferrer"
+                                <a href="https://instagram.com/phol.ux" target="_blank" class="btn btn-outline-light social-link"
+                                     rel="noopener noreferrer"
                                     aria-label="Visit our Instagram page">
                                     <i class="bi bi-instagram"></i> Instagram
                                 </a>
-                                <a href="https://tiktok.com/@pho.lux" target="_blank" class="btn btn-outline-light"
-                                    style="color: var(--text-color)" rel="noopener noreferrer"
+                                <a href="https://tiktok.com/@pho.lux" target="_blank" class="btn btn-outline-light social-link"
+                                    rel="noopener noreferrer"
                                     aria-label="Visit our TikTok page">
                                     <i class="bi bi-tiktok"></i> TikTok
                                 </a>
                                 <a href="https://www.yelp.com/biz/pho-lux-houston" target="_blank"
-                                    class="btn btn-outline-light" style="color: var(--text-color)"
+                                    class="btn btn-outline-light social-link"
                                     rel="noopener noreferrer" aria-label="View our Yelp reviews">
                                     <i class="bi bi-yelp"></i> Yelp Reviews
                                 </a>
