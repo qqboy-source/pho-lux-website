@@ -1,93 +1,75 @@
 :root {
-  --heading-font: 'Playfair Display', serif;
-  --body-font: 'Lato', sans-serif;
-  --primary-color: #e67e22;
-  /* Orange color */
-  --secondary-color: #000;
-  /* Black */
-  --text-color: #fff;
-  /* White */
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Lato', sans-serif;
+    --primary-color: #e67e22;  /* Orange color */
+    --secondary-color: #000; /* Black */
+    --text-color: #fff;       /* White */
 }
 
 body {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  font-family: var(--body-font);
-  line-height: 1.6;
-  padding-top: 70px;
-  /* Adjust to account for fixed navbar */
-  position: relative;
-  /* Needed for the back-to-top button positioning */
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    line-height: 1.6;
+    padding-top: 70px; /* Adjust to account for fixed navbar */
+    position: relative; /* Needed for the back-to-top button positioning */
 }
 
 /* Navbar Styles */
 .navbar {
-  background-color: var(--secondary-color) !important;
-  width: 100%;
-  z-index: 1000;
-  border-bottom: 3px solid var(--primary-color);
+    background-color: var(--secondary-color) !important;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .navbar-brand {
-  color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
 }
 
 .nav-link {
-  color: var(--text-color) !important;
-  transition: color 0.3s ease;
+    color: var(--text-color) !important;
+    transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
 }
 
 /* --- Hero Section Styles (Text Only) --- */
 .hero-section {
-  background-color: var(--secondary-color);
-  /* Keep background black */
-  padding-top: 150px;
-  /* Space for fixed navbar + some extra space */
-  text-align: center;
-  /* Center the text */
+  background-color: var(--secondary-color); /* Keep background black */
+  padding-top: 80px;  /* Space for fixed navbar.  Reduced from 100px */
+  text-align: center; /* Center the text */
 }
-
 /* Hero Image Section Styles */
 #hero-image {
-  background-color: var(--secondary-color);
-  /* Consistent background */
-  padding: 20px 0;
-  /* Add some padding around the image */
-  text-align: center;
-  /* Center the image horizontally within its container */
+    background-color: var(--secondary-color); /* Consistent background */
+    padding: 20px 0; /* Add some padding around the image */
+    text-align: center; /* Center the image horizontally within its container */
 }
 
-#hero-image img {
-  max-width: 100%;
-  /*  Make sure image doesn't overflow */
-  height: auto;
-  /*  Preserve aspect ratio */
-  display: block;
-  /* Remove extra space below inline elements */
-  margin: 0 auto;
-  /*  Center horizontally */
-}
+ #hero-image img {
+        max-width: 100%;  /*  Make sure image doesn't overflow */
+        height: auto;      /*  Preserve aspect ratio */
+        display: block;    /* Remove extra space below inline elements */
+        margin: 0 auto;    /*  Center horizontally */
+     }
 
 /* --- Modified h1 styling for hero section --- */
 .hero-heading {
   font-family: var(--heading-font);
   font-size: 7rem;
-  color: var(--primary-color);
-  /* Orange color */
+  color: var(--primary-color);  /* Orange color */
   text-align: center;
   letter-spacing: 0.2em;
-  transition: transform 0.2s ease-in-out;
-  /*  Keep the transition */
-  margin-bottom: 0.5em; /* Add space below the heading */
+  transition: transform 0.2s ease-in-out;  /*  Keep the transition */
+  margin-top: 0;       /* Remove default top margin */
+  margin-bottom: 0.5em; /* Add space *below* the heading */
 }
 
 .hero-heading:hover {
-  transform: scale(1.1);
-  /* Keep the hover effect */
+  transform: scale(1.1);  /* Keep the hover effect */
   cursor: pointer;
 }
 
@@ -95,186 +77,164 @@ body {
 
 /* Best Sellers Section */
 #best-sellers {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 #best-sellers h2 {
-  color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .best-seller-item {
-  background-color: rgba(0, 0, 0, 0.7);
-  border: 3px solid var(--primary-color);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  color: var(--text-color);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  /* Add transition */
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 3px solid var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: var(--text-color);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Add transition */
 }
 
 .best-seller-item:hover {
-  transform: scale(1.05);
-  /* Scale up slightly on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  /* Increase box-shadow on hover */
-  cursor: pointer;
+    transform: scale(1.05); /* Scale up slightly on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Increase box-shadow on hover */
+    cursor: pointer;
 }
 
 .best-seller-item h4 {
-  color: var(--primary-color);
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-  font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .best-seller-item .description {
-  font-style: normal;
-  color: #ccc;
-  margin-bottom: 15px;
+    font-style: normal;
+    color: #ccc;
+    margin-bottom: 15px;
 }
 
 .best-seller-item .price {
-  font-size: 1.2rem;
-  color: var(--primary-color);
+    font-size: 1.2rem;
+    color: var(--primary-color);
 }
 
 .blockquote {
-  font-family: var(--heading-font);
-  border-left: 3px solid var(--primary-color);
-  padding-left: 1.5rem;
-  margin: 2rem 0;
+    font-family: var(--heading-font);
+    border-left: 3px solid var(--primary-color);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
 }
 
 /* Meet the Team Section */
 .team-member {
-  margin-bottom: 30px;
-  text-align: center;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .team-member img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
-.team-description {
-  font-size: 1.3rem;
+.team-description{
+    font-size: 1.3rem;
 }
-
 /* Changed team member name color */
 .team-name {
-  color: var(--primary-color);
-  font-size: 1.3rem;
-  /* Make team names same size as descriptions */
+    color: var(--primary-color);
+    font-size: 1.3rem; /* Make team names same size as descriptions */
 }
 
 .team-title {
-  font-size: 1.3rem;
-  /* Equalize team title font size */
-  color: var(--primary-color);
-  /*  Set team title color */
+    font-size: 1.3rem;  /* Equalize team title font size */
+    color: var(--primary-color);  /*  Set team title color */
 }
 
 /* Contact Us Section */
 .contact-form {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 .contact-form .form-control {
-  background-color: #333;
-  color: var(--text-color) !important;
-  /* Make sure the color is applied */
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 15px;
+    background-color: #333;
+    color: var(--text-color) !important; /* Make sure the color is applied */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
 }
 
 .contact-form .form-control::placeholder {
-  color: white;
-  opacity: 0.8;
+    color: white;
+    opacity: 0.8;
 }
 
 .contact-form .btn-primary {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-  .hero-section {
-    height: auto;
-    /* Let the content determine height on smaller screens */
-    padding-bottom: 20px;
-    /* Ensure some padding at the bottom */
-  }
+ .hero-section {
+        height: auto; /* Let the content determine height on smaller screens */
+        padding-bottom: 20px; /* Ensure some padding at the bottom */
+    }
 
   /* About section on smaller screens */
   #about .row {
-    flex-direction: column;
-    /* Stack image and text vertically */
+    flex-direction: column; /* Stack image and text vertically */
   }
 
   #about .col-md-6 {
-    width: 100%;
-    /* Full width for both columns */
-  }
-
-  /* make the map smaller */
-  .map-container iframe {
-    height: 300px;
-    /* Adjust height for smaller screens */
-  }
+    width: 100%; /* Full width for both columns */
+}
+/* make the map smaller */
+   .map-container iframe {
+        height: 300px;  /* Adjust height for smaller screens */
+    }
 }
 
 .navbar-brand img {
-  height: 75px;
-  width: 150px
+    height: 75px;
+    width: 150px
 }
 
 /*  Explicitly set colors */
 .hero-section .container .lead {
-  color: var(--primary-color) !important;
-  /*  Hero section subheading */
+    color: var(--primary-color) !important; /*  Hero section subheading */
 }
 
 /*  Consistent heading colors */
-#about .container h2,
-  /* About section heading */
-  #team .container h2,
-  /* Team section heading */
-  #contact-us h2,
-  /* Contact Us heading */
-  #contact h2,
-  /* Contact & Location heading */
-  #best-sellers h2 {
-  /* Best Sellers heading */
-  color: var(--primary-color) !important;
+#about .container h2,  /* About section heading */
+#team .container h2,   /* Team section heading */
+#contact-us h2,        /* Contact Us heading */
+#contact h2,           /* Contact & Location heading */
+#best-sellers h2 {      /* Best Sellers heading */
+    color: var(--primary-color) !important;
 }
 
 /*Correct about text color*/
 #about p,
 #about blockquote {
-  color: var(--text-color) !important;
+    color: var(--text-color) !important;
 }
 
 /*Set color for team section*/
 #team h4,
 #team .team-title {
-  /*  Corrected selector here! */
-  color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
 }
-
-#team p {
+#team p{
   color: var(--text-color) !important;
 }
 
@@ -297,7 +257,7 @@ body {
 
 /* About Section Fade-in and text size changes */
 .about-paragraph {
-  font-size: 1.3rem;
+    font-size: 1.3rem;
 }
 
 /* Meet The Team Fade-In */
@@ -307,103 +267,4 @@ body {
   transition: all 0.8s ease-in-out;
 }
 
-.team-member.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Back to Top Button Styles */
-#back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  border: none;
-  border-radius: 50%;
-  padding: 10px 15px;
-  font-size: 20px;
-  cursor: pointer;
-  z-index: 1001;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: background-color: 0.3s ease;
-}
-
-#back-to-top:hover {
-  background-color: #e0a800;
-}
-
-/* Ensure images are responsive */
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
-
-/* About section specific styles */
-#about .about-image {
-  border-radius: 15px;
-  /* Optional: Add rounded corners to the image */
-  margin-bottom: 20px;
-  /* Add some space below the image on mobile */
-}
-
-/* Style for the "Talk to Us" paragraph */
-.talk-to-us-text {
-  font-size: 1.2rem;
-  /* Increased font size */
-  color: var(--text-color);
-}
-
-.map-container {
-  position: relative;
-  overflow: hidden;
-  border-radius: 15px;
-  /* Rounded corners for the container */
-}
-
-.map-container iframe {
-  border-radius: 15px;
-  /* Match the container's border-radius */
-  display: block;
-  width: 100%;
-  height: 450px;
-  transition: transform 0.2s ease-in-out;
-  /*  For hover */
-}
-
-/* add Contact & Location style */
-#contact h4 {
-  color: var(--primary-color);
-}
-
-.map-container:hover iframe {
-  box-shadow: 0 0 15px 5px var(--primary-color);
-  /* Orange glow on hover */
-}
-
-.social-links a {
-  margin-right: 10px;
-  /* Add some spacing between social icons */
-}
-
-/* Hover style for social links */
-.social-links .social-link:hover {
-  background-color: var(--primary-color);
-  /* Use the primary color (orange) */
-  color: var(--secondary-color) !important;
-  /* Set text color to secondary (black) on hover*/
-  /* Ensure the hover effect applies */
-}
-/* Style for the download buttons */
-#old-menu-images .btn-primary {
-    background-color: var(--primary-color); /* Orange background */
-    color: var(--secondary-color);        /* Black text */
-    border-color: var(--primary-color);    /* Orange border */
-}
-
-#old-menu-images .btn-primary:hover {
-    background-color: var(--secondary-color); /* Black background on hover */
-    color: var(--primary-color) !important;        /* Orange text on hover */
-    border-color: var(--primary-color);    /* Orange border on hover*/
-}
+.team-member.
