@@ -153,6 +153,7 @@ body {
 .team-title {
     font-size: 1.3rem;  /* Equalize team title font size */
     color: var(--primary-color);  /*  Set team title color */
+	margin-bottom: 1rem;
 }
 
 /* Contact Us Section */
@@ -230,10 +231,12 @@ body {
 }
 
 /*Set color for team section*/
+/* Corrected selector to apply orange to both name and title */
 #team h4,
 #team .team-title {
     color: var(--primary-color) !important;
 }
+
 #team p{
   color: var(--text-color) !important;
 }
@@ -339,16 +342,14 @@ body {
     color: var(--secondary-color) !important; /* Set text color to secondary (black) on hover*/
      /* Ensure the hover effect applies */
 }
-
-/* Style for the download buttons - CORRECTED */
+/* Style for the download buttons */
 #old-menu-images .btn-download {
     background-color: var(--primary-color); /* Orange background */
     border-color:     var(--primary-color);    /* Orange border    */
-    color: var(--secondary-color);          /* Black text    */
+    color: var(--secondary-color);          /* Black text  */
 }
-
-#old-menu-images .btn-download:hover {
-    background-color: #b96218;  /* Darker orange on hover */
-     border-color: var(--primary-color); /* Orange border */
-    color: var(--secondary-color) !important; /* Keep text black on hover */
+ #old-menu-images .btn-download:hover {
+    background-color: #b96218;   /* Darker orange on hover */
+    border-color:     var(--primary-color);
+    color: var(--secondary-color) !important; /* orange text  on hover*/
 }
