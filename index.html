@@ -121,27 +121,32 @@
         </section>
 
         <!-- Old Menu Images Section -->
-<section id="old-menu-images" class="py-5" style="background-color: var(--secondary-color); color: var(--primary-color);">
-    <div class="container text-center">
-        <h2 class="text-center mb-5">Full Menu</h2>
-        <div class="row g-4 justify-content-center">
-            <div class="col-md-6">
-                <!-- Food Menu -->
-                <img src="PhoLUXMenu-2.png" alt="Food Menu" class="img-fluid menu-image" loading="lazy">
-                <div>
-                    <a href="PhoLUXMenu-2.pdf" download class="btn btn-download mt-2">Download Food Menu (PDF)</a>
+        <section id="old-menu-images" class="py-5"
+            style="background-color: var(--secondary-color); color: var(--primary-color);">
+            <div class="container text-center">
+                <h2 class="text-center mb-5">Full Menu</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6">
+                        <!-- Link to the PDF, and a separate image for preview -->
+                         <a href="PhoLUXMenu-2.pdf">  <!-- Removed target="_blank" -->
+                            <img src="PhoLUXMenu-2.png" alt="Food Menu" class="img-fluid menu-image" loading="lazy">
+                         </a>
+                         <div>
+                             <a href="PhoLUXMenu-2.pdf" download class="btn btn-download mt-2">Download Food Menu (PDF)</a>  <!-- Corrected class -->
+                          </div>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Link to the PDF, and a separate image for preview -->
+                         <a href="PhoLUXMenu-1.pdf">   <!-- Removed target="_blank" -->
+                            <img src="PhoLUXMenu-1.png" alt="Drinks Menu" class="img-fluid menu-image" loading="lazy">  <!-- Corrected image source -->
+                        </a>
+                        <div>
+                            <a href="PhoLUXMenu-1.pdf" download class="btn btn-download mt-2">Download Drinks Menu (PDF)</a> <!-- Corrected class -->
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <!-- Drinks Menu -->
-                <img src="PhoLUXMenu-1.png" alt="Drinks Menu" class="img-fluid menu-image" loading="lazy"> <!-- Corrected src -->
-                <div>
-                    <a href="PhoLUXMenu-1.pdf" download class="btn btn-download mt-2">Download Drinks Menu (PDF)</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- Meet the Team Section -->
         <section id="team" class="py-5">
@@ -185,22 +190,18 @@
                     Reach out today—we’d love to discuss your needs.</p> <!-- Updated Text and class -->
                 <div class="row justify-content-center">
                     <div class="col-md-6">
-                        <form class="contact-form" action="https://formspree.io/f/YOUR_ACTUAL_FORM_ID" method="POST">
-                            <!--  REPLACE YOUR_ACTUAL_FORM_ID with your Formspree Form ID -->
+                    <form class="contact-form" action="https://formspree.io/f/xdkarqwl" method="POST">
                             <div class="mb-3">
                                 <label for="name" class="form-label visually-hidden">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Name" name="name"
-                                    required>
+                                <input type="text" class="form-control" id="name" placeholder="Name" name="name" required>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label visually-hidden">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Email" name="email"
-                                    required>
+                                <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
                             </div>
                             <div class="mb-3">
                                 <label for="message" class="form-label visually-hidden">Message</label>
-                                <textarea class="form-control" rows="4" id="message" placeholder="Message" name="message"
-                                    required></textarea>
+                                <textarea class="form-control" rows="4" id="message" placeholder="Message" name="message" required></textarea>
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -286,7 +287,7 @@
             Formspree.submissionHandler({
                 form: form,
                 button: form.querySelector("button[type=submit]"), // Select the submit button
-                //  debug: true // Uncomment this for debugging during development
+                //debug: true  // Uncomment this for debugging during development
             });
         });
     </script>
